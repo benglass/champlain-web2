@@ -3,10 +3,10 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Ben Glassman'
-SITENAME = u'Web 2 (GDD 306) / Ben Glassman / Champlain College'
+SITENAME = u'Web 2 (GDD 306) @ Champlain College'
 SITEURL = ''
 
-TIMEZONE = 'Europe/Paris'
+TIMEZONE = 'America/New York'
 
 DEFAULT_LANG = u'en'
 
