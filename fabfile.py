@@ -24,6 +24,7 @@ def rebuild():
 
 def regenerate():
     local('pelican -r -s pelicanconf.py content')
+    local('pelican -r -s pelicanconf.py themes')
 
 def serve():
     local('cd {deploy_path} && python -m SimpleHTTPServer'.format(**env))

@@ -16,12 +16,24 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
 # Blogroll
-LINKS =  (('Champlain College', 'http://www.champlain.edu'),)
+LINKS = False
 
 # Social widget
 SOCIAL = False
 
 DEFAULT_PAGINATION = 10
 
+THEME = 'themes/champlain'
+
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+# Course Settings
+COURSE_NAME = 'Web 2'
+COURSE_NUM = 'GDD 306-51'
+COURSE_SEMESTER = 'Spring 2014'
+COURSE_LOCATION = 'Ireland 012'
+COURSE_TIMES = 'Monday 5:30 - 8:15 PM'
+INSTRUCTOR_NAME = 'Ben Glassman'
+INSTRUCTOR_EMAIL = 'bglassmancc@gmail.com'
+
