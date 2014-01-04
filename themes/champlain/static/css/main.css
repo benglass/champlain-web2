@@ -15,11 +15,18 @@
 
 body {
 	font: 62.5%/1.8em 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	margin: 3.6em;
+	margin: 8em 3.6em;
 }
 
 a:link, a:visited { color: #000; }
 a:hover, a:active { color: red; }
+
+h1 {
+	font-size: 2.4em;
+	margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #000;
+}
 
 h2 {
 	font-size: 1.8em;
@@ -27,7 +34,7 @@ h2 {
 	text-indent: 10em;
 	margin-top: 2em;
 	margin-bottom: 0.4444em;
-	padding-bottom: 1em;
+	padding-bottom: 0.5em;
 }
 
 h3 {
@@ -78,17 +85,26 @@ div.section h3 {
 	left: 0;
 }
 
+.masthead {
+    margin-bottom: 2em;
+}
+
 .site-title {
 	font-size: 2.2em;
 	border-bottom: 1px solid #000;
     font-weight: bold;
-	text-indent: 8em;
 	margin-top: 2em;
 	margin-bottom: 0.4444em;
 	padding-bottom: 0.5em;
 }
 
-.site-title a { text-decoration: none; }
+.site-title a { color: maroon; text-decoration: none; }
+.site-info {
+    color: #333;
+    border-top: 1px solid #000;
+    padding-top: 2em;
+    margin-top: 4em;
+}
 
 .course-info {
     overflow: hidden;
@@ -97,17 +113,21 @@ div.section h3 {
 .course-info .course-details {
 	list-style: none;
     float: left;
-    width: 20em;
+    width: 25em;
     margin-right: 1em;
 }
 
+.course-info .course-details li { font-size: 1.4em; }
 .course-info .course-details > :first-child {
     font-weight: bold;
 }
 
 .nav-primary {
     overflow: hidden;
-    margin-bottom: 2em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
 }
 
 .nav-primary ul { list-style: none; margin: 0; }
