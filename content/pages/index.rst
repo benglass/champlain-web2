@@ -6,3 +6,13 @@
 :label: Home
 
 This is some content. Its great. 
+
+.. code-block:: css
+
+    .style {
+        font-weight: bold;
+    }
+
+.. code-block:: html
+
+    <p>This is some html</p>
