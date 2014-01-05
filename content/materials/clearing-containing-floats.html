@@ -1,0 +1,220 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<title>CSS: Clearing and Containing Floats | Web 2</title>
+		<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+		<link href="js/highlight.js/styles/sunburst.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/highlight.js/highlight.pack.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
+		<style type="text/css" media="all">
+.employee {
+	background: #e5e5e5;
+	border: 1px solid #ccc;
+	padding: 15px;
+}
+
+.headshot {
+	float: right;
+}
+
+.well {
+	overflow: hidden;
+}
+
+.clear {
+	clear: both;
+}
+
+.row {
+	overflow: hidden;
+	padding: 15px;
+	border-bottom: 1px solid #ccc;
+}
+
+.row img {
+	float: left;
+	margin-right: 15px;
+}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Clearing and Containing Floats</h1>
+			<h2>Containing Floats</h2>
+			<p class="well well-large">
+			When an element has had a <strong>float</strong> applied to it, it is no longer contained by any parent elements.<br />Since the parent element does not stretch to fit the floated children, background colors/images and borders will not appear to wrap around the floated element.
+			</p>
+			<div class="well">
+				<h3>Example</h3>
+				<h4>CSS</h4>
+<pre><code>.employee {
+	background: #e5e5e5;
+	border: 1px solid #ccc;
+	padding: 15px;
+}
+
+.headshot {
+	float: right;
+}</code></pre>
+				<h4>HTML</h4>
+<pre><code>&lt;div class="employee"&gt;
+	&lt;div class="headshot"&gt;
+		&lt;img src="images/diving-dog-1-620x353.png" width="300" alt="Dog Diving Underwater" /&gt;
+	&lt;/div&gt;
+	&lt;h2&gt;John Q. Public&lt;/h2&gt;
+	&lt;p&gt;John is a very valuable member of our team.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+				<h4>Result</h4>
+				<div class="employee">
+					<div class="headshot">
+						<img src="images/diving-dog-1-620x353.png" width="300" alt="Dog Diving Underwater" />
+					</div>
+					<h2>John Q. Public</h2>
+					<p>John is a very valuable member of our team.</p>
+				</div>
+			</div>
+			<p class="well well-large">
+			There are times when this effect might not matter, but as we see in the above example it is problematic when you are dealing with backgrounds/borders on the parent element.<br />
+			There are three different approaches to forcing the parent to contain the floated children: <strong>clear the float</strong>, <strong>float the parent</strong> or <strong>apply a clearfix to the parent</strong><br />
+			</p>
+			<h2>Approach 1: Clear the Float</h2>
+			<p>If we clear the float by setting <strong>clear: both</strong> (or left in this case), then the issue will disappear. In this case, we have a paragraph element containing a bio after the headshot, but if we set clear on that, it will result in the text being pushed down below the image. In this case, we would need to add an empty div, just to clear the float.</p>
+			<div class="well">
+				<h4>CSS</h4>
+<pre><code>.employee {
+	background: #e5e5e5;
+	border: 1px solid #ccc;
+	padding: 15px;
+}
+
+.headshot {
+	float: right;
+}
+
+.clear {
+	<strong>clear: both;</strong>
+}
+</code></pre>
+				<h4>HTML</h4>
+<pre><code>&lt;div class="employee"&gt;
+	&lt;div class="headshot"&gt;
+		&lt;img src="images/diving-dog-1-620x353.png" width="300" alt="Dog Diving Underwater" /&gt;
+	&lt;/div&gt;
+	&lt;h2&gt;John Q. Public&lt;/h2&gt;
+	&lt;p&gt;John is a very valuable member of our team.&lt;/p&gt;
+	&lt;div class="clear"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				<h4>Result</h4>
+				<div class="employee">
+					<div class="headshot">
+						<img src="images/diving-dog-1-620x353.png" width="300" alt="Dog Diving Underwater" />
+					</div>
+					<h2>John Q. Public</h2>
+					<p>John is a very valuable member of our team.</p>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<p>This approach works, but it often involves adding extra div tags with nothing inside of them, which is not optimal.</p>
+			<h2>Approach 2: Float the Parent</h2>
+			<p>By floating the parent element (the employee div), we can cause it to wrap around the floated headshot element.</p>
+			<div class="well">
+				<h4>CSS</h4>
+<pre><code>.employee {
+	background: #e5e5e5;
+	border: 1px solid #ccc;
+	padding: 15px;
+	<strong>float: left;</strong>
+}
+
+.headshot {
+	float: right;
+}</code></pre>
+				<h4>Result</h4>
+				<div class="employee" style="float: left;">
+					<div class="headshot">
+						<img src="images/diving-dog-1-620x353.png" width="300" alt="Dog Diving Underwater" />
+					</div>
+					<h2>John Q. Public</h2>
+					<p>John is a very valuable member of our team.</p>
+				</div>
+			</div>
+			<p>Now the background color/border wraps around the floated element, but as a result of applying the float to the parent, we are left with the side effect of it shrinking in width to fit the content. We could fix this by applying a <code>width: 100%;</code>, but lets look at the other approach, <strong>applying a clearfix</strong> to the parent.</p>
+			<h2>Approach 3: Clearfix</h2>
+			<p>A <strong>clearfix</strong> is a term in CSS for a set of properties that cause a parent to wrap around any children that are floated. There are many different clearfixes available, and a google for "clearfix" will yield a number of results. The simplest one is to set <strong>overflow: hidden;</strong> on the parent element.</p>
+			<div class="well">
+				<h4>CSS</h4>
+<pre><code>.employee {
+	background: #e5e5e5;
+	border: 1px solid #ccc;
+	padding: 15px;
+	<strong>overflow: hidden;</strong>
+}
+
+.headshot {
+	float: right;
+}</code></pre>
+				<h4>Result</h4>
+				<div class="employee" style="overflow: hidden;">
+					<div class="headshot">
+						<img src="images/diving-dog-1-620x353.png" width="300" alt="Dog Diving Underwater" />
+					</div>
+					<h2>John Q. Public</h2>
+					<p>John is a very valuable member of our team.</p>
+				</div>
+			</div>
+			<p>This achieves the result we are looking for without shrinking the width of the parent container and without just moving the issue of containing the floated elements up a level (floating the parent means that the parent of the parent now doesnt contain it unless has a clearfix or float applied).</p>
+			<h2>Thumbnail Grid</h2>
+			<p>Using the techniques above, we can achieve a layout that involves rows of thumbnails with a border in between. We use a div element for each row and use the <strong>overflow: hidden</strong> technique to force it to contain the floated images within.</p>
+			<div class="well">
+				<h4>CSS</h4>
+<pre><code>.row {
+	overflow: hidden;
+	padding: 15px;
+	border-bottom: 1px solid #ccc;
+}
+
+.row img {
+	float: left;
+	margin-right: 15px;
+}</code></pre>
+				<h4>HTML</h4>
+<pre><code>&lt;div class="row"&gt;
+	&lt;img src="images/diving-dog-1-620x353.png" width="100" alt="Dog Diving Underwater" /&gt;
+	&lt;img src="images/diving-dog-1-620x353.png" width="100" alt="Dog Diving Underwater" /&gt;
+	&lt;img src="images/diving-dog-1-620x353.png" width="100" alt="Dog Diving Underwater" /&gt;
+	&lt;img src="images/diving-dog-1-620x353.png" width="100" alt="Dog Diving Underwater" /&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+	&lt;img src="images/diving-dog-1-620x353.png" width="100" alt="Dog Diving Underwater" /&gt;
+	&lt;img src="images/diving-dog-1-620x353.png" width="100" alt="Dog Diving Underwater" /&gt;
+	&lt;img src="images/diving-dog-1-620x353.png" width="100" alt="Dog Diving Underwater" /&gt;
+	&lt;img src="images/diving-dog-1-620x353.png" width="100" alt="Dog Diving Underwater" /&gt;
+&lt;/div&gt;</code></pre>
+				<h4>Result</h4>
+				<div class="row">
+					<img src="images/diving-dog-1-620x353.png" width="100" alt="Dog Diving Underwater" />
+					<img src="images/diving-dog-1-620x353.png" width="100" alt="Dog Diving Underwater" />
+					<img src="images/diving-dog-1-620x353.png" width="100" alt="Dog Diving Underwater" />
+					<img src="images/diving-dog-1-620x353.png" width="100" alt="Dog Diving Underwater" />
+					<img src="images/diving-dog-1-620x353.png" width="100" alt="Dog Diving Underwater" />
+					<img src="images/diving-dog-1-620x353.png" width="100" alt="Dog Diving Underwater" />
+					<img src="images/diving-dog-1-620x353.png" width="100" alt="Dog Diving Underwater" />
+					<img src="images/diving-dog-1-620x353.png" width="100" alt="Dog Diving Underwater" />
+					<img src="images/diving-dog-1-620x353.png" width="100" alt="Dog Diving Underwater" />
+				</div>
+				<div class="row">
+					<img src="images/diving-dog-1-620x353.png" width="100" alt="Dog Diving Underwater" />
+					<img src="images/diving-dog-1-620x353.png" width="100" alt="Dog Diving Underwater" />
+					<img src="images/diving-dog-1-620x353.png" width="100" alt="Dog Diving Underwater" />
+					<img src="images/diving-dog-1-620x353.png" width="100" alt="Dog Diving Underwater" />
+					<img src="images/diving-dog-1-620x353.png" width="100" alt="Dog Diving Underwater" />
+					<img src="images/diving-dog-1-620x353.png" width="100" alt="Dog Diving Underwater" />
+					<img src="images/diving-dog-1-620x353.png" width="100" alt="Dog Diving Underwater" />
+					<img src="images/diving-dog-1-620x353.png" width="100" alt="Dog Diving Underwater" />
+					<img src="images/diving-dog-1-620x353.png" width="100" alt="Dog Diving Underwater" />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

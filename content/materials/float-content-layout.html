@@ -1,0 +1,237 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<title>CSS: Clearing and Containing Floats | Web 2</title>
+		<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+		<link href="js/highlight.js/styles/sunburst.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/highlight.js/highlight.pack.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
+		<style type="text/css" media="all">
+.image-right {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.result {
+    border:5px solid #e5e5e5;
+    background: #fff;
+    padding: 50px;
+    position: relative;
+    margin-top: 50px;
+}
+
+.result .heading {
+    margin: 0;
+    position: absolute;
+    top: -1em;
+    left: 25px;
+}
+
+.employee .headshot {
+    float: left;
+    width: 300px;
+}
+
+.employee .bio {
+    margin-left: 330px; /* Extra 30px of margin to prevent the bio from the touching the headshot */
+}
+
+.thumbnail-row {
+    clear: both;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.thumbnail {
+    float: left;
+    width: 150px;
+    margin-right: 15px;
+}
+
+.clear {
+	clear: both;
+}
+</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Common Content Layout Patterns using Float</h1>
+
+            <div class="well">
+                <h2>1. Text flows around image</h2>
+                <p>This is the most common use of floats for basic content layout. You have a few paragraphs of content on a page and you add an image. You want the text to flow around the image.</p>
+                <h2>Solution</h2>
+                <p> Add an HTML wrapper to the image (paragraph or div tag) with an image-right or image-left class. Also add bottom margin and left or right margin to add space around the image. <strong>Hint:</strong> You must place the image <em>before</em> the content you want to flow around it.</p>
+                <h3>Example</h3>
+                <h4>CSS</h4>
+                <pre><code>.image-right {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.clear {
+    clear: both;
+}</code></pre>
+                <h4>HTML</h4>
+                <pre><code>&lt;div class="image-right"&gt;
+    &lt;img src="images/diving-dog-1-620x353.png" width="300" alt="Dog Diving Underwater" /&gt;
+&lt;/div&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing etc. etc.&lt;/p&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing etc. etc.&lt;/p&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing etc. etc.&lt;/p&gt;
+&lt;div class="clear"&gt;&lt;/div&gt;&lt;-- Clearing div to prevent further content from flowing around floated image --&gt;
+                </code></pre>
+                <div class="result">
+                    <h3 class="heading">Result</h3>
+                    <div class="image-right">
+                        <img src="images/diving-dog-1-620x353.png" width="300" alt="Dog Diving Underwater" />
+                    </div>
+                    <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dignissim arcu sed nibh porta, ut condimentum enim sollicitudin. Nullam ac libero aliquam, pellentesque ipsum ut, tempor dolor. Morbi tincidunt nisi vel neque volutpat egestas. Quisque vel arcu lectus. Suspendisse lobortis libero est, at mollis justo laoreet at. Curabitur aliquam orci lorem, at tempor purus tincidunt eu. In placerat sed diam vitae gravida. Donec porttitor nibh pretium, fermentum eros at, rutrum dolor. Nulla vel leo vitae tellus condimentum fermentum at vitae massa. Suspendisse est diam, sodales quis mollis sed, aliquet ac tellus. In nec augue ac neque pellentesque pharetra. Phasellus quam lacus, adipiscing egestas leo quis, accumsan commodo enim. Fusce nec porta nunc.
+                    </p>
+                    <p>
+                    Duis condimentum semper diam, et aliquam massa eleifend at. Etiam adipiscing porttitor dignissim. Proin blandit id mi et luctus. In tempus blandit libero, at egestas ligula eleifend at. Cras lacinia et justo quis sollicitudin. Ut aliquet gravida leo, id dignissim est gravida eget. Fusce vitae pellentesque dui, sed ornare ligula. In hac habitasse platea dictumst. Integer eget purus sagittis, tempus neque sit amet, luctus massa. Donec vel justo tempor, venenatis purus quis, sollicitudin massa. Aenean tristique iaculis magna sit amet pharetra. Aliquam pretium felis dictum placerat interdum. Cras vel metus quis libero tempor pretium. Pellentesque eu enim at turpis euismod vulputate. Fusce molestie ipsum nibh, vel ultricies velit tincidunt a.
+                    </p>
+                </div>
+            </div>
+
+            <div class="well">
+                <h2>2. Text Column next to Image Column (or any 2 columns)</h2>
+                <p>Often times you want to create a 2 column layout where the text in column a does not flow around the image in the other column.</p>
+                <h2>Solution</h2>
+                <p>Create a wrapping tag (article or div tag) for each column, giving both tags a unique class. In our example we will show an employee listing from a staff page. We will have a wrapping tag for a headshot image and a wrapping tag for the bio. You can achieve this by floating the first wrapper and then setting a margin on the second one. If you float the headshot to the right and it is 200 pixels wide, then set 200 pixels of right margin on the bio so it will not flow around the headshot. If you float the headshot to the left, then use left margin on the bio. <strong>Hint:</strong> When you float an HTML element it will shrinkwrap to fit the width of the content. Sometimes you need to set a width to constrain it to a certain size (especially when the column contains an unknown amount of text or has a specific desired width).</p>
+                <h3>Example</h3>
+                <h4>CSS</h4>
+                <pre><code>.headshot {
+    float: left;
+    width: 300px;
+}
+
+.bio {
+    margin-left: 330px; /* Extra 30px of margin to prevent the bio from the touching the headshot */
+}
+
+.clear {
+    clear: both;
+}</code></pre>
+                <h4>HTML</h4>
+                <pre><code>&lt;div class=&quot;employee&quot;&gt;
+    &lt;div class=&quot;headshot&quot;&gt;
+        &lt;img src=&quot;images/diving-dog-1-620x353.png&quot; width=&quot;300&quot; alt=&quot;Dog Diving Underwater&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;bio&quot;&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, etc. etc.&lt;/p&gt;
+        &lt;p&gt;Duis condimentum semper diam, etc. etc.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="clear"&gt;&lt;/div&gt;&lt;-- Clearing div to ensure employee div wraps around floated content --&gt;
+&lt;/div&gt;</code></pre>
+                <div class="result">
+                    <h3 class="heading">Result</h3>
+                    <div class="employee">
+                        <div class="headshot">
+                            <img src="images/diving-dog-1-620x353.png" width="300" alt="Dog Diving Underwater" />
+                        </div>
+                        <div class="bio">
+                            <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dignissim arcu sed nibh porta, ut condimentum enim sollicitudin. Nullam ac libero aliquam, pellentesque ipsum ut, tempor dolor. Morbi tincidunt nisi vel neque volutpat egestas. Quisque vel arcu lectus. Suspendisse lobortis libero est, at mollis justo laoreet at. Curabitur aliquam orci lorem, at tempor purus tincidunt eu. In placerat sed diam vitae gravida. Donec porttitor nibh pretium, fermentum eros at, rutrum dolor. Nulla vel leo vitae tellus condimentum fermentum at vitae massa. Suspendisse est diam, sodales quis mollis sed, aliquet ac tellus. In nec augue ac neque pellentesque pharetra. Phasellus quam lacus, adipiscing egestas leo quis, accumsan commodo enim. Fusce nec porta nunc.
+                            </p>
+                            <p>
+                            Duis condimentum semper diam, et aliquam massa eleifend at. Etiam adipiscing porttitor dignissim. Proin blandit id mi et luctus. In tempus blandit libero, at egestas ligula eleifend at. Cras lacinia et justo quis sollicitudin. Ut aliquet gravida leo, id dignissim est gravida eget. Fusce vitae pellentesque dui, sed ornare ligula. In hac habitasse platea dictumst. Integer eget purus sagittis, tempus neque sit amet, luctus massa. Donec vel justo tempor, venenatis purus quis, sollicitudin massa. Aenean tristique iaculis magna sit amet pharetra. Aliquam pretium felis dictum placerat interdum. Cras vel metus quis libero tempor pretium. Pellentesque eu enim at turpis euismod vulputate. Fusce molestie ipsum nibh, vel ultricies velit tincidunt a.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end #2 -->
+
+            <div class="well">
+                <h2>3. Grid of thumbnails in rows</h2>
+                <p>Sometimes your designs will call for a grid display of rows and columns. For example, a photo gallery often displays thumbnails in a grid with each row containing a certain number of thumbnails.</p>
+                <h2>Solution</h2>
+                <p>We can achieve this grid layout using wrapper tags (div tags generally) for each row and multiple floated html tags within each row. Each row will include a clearing div to ensure it wraps around the items in the row and will clear any past floats.</p>
+                <h3>Example</h3>
+                <h4>CSS</h4>
+                <pre><code>.thumbnail-row {
+    clear: both;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px; /* Padding adds spacing between the border and the thumbnails */
+    margin-bottom: 15px; /* Margin adds spacing between the rows */
+}
+
+.thumbnail {
+    float: left;
+    width: 150px;
+    margin-right: 15px;
+}
+
+.clear {
+    clear: both;
+}</code></pre>
+                <h4>HTML</h4>
+                <pre><code>&lt;div class=&quot;thumbnail-row&quot;&gt;
+    &lt;div class=&quot;thumbnail&quot;&gt;
+        &lt;img src=&quot;images/diving-dog-1-620x353.png&quot; width=&quot;150&quot; alt=&quot;Dog Diving Underwater&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;thumbnail&quot;&gt;
+        &lt;img src=&quot;images/diving-dog-1-620x353.png&quot; width=&quot;150&quot; alt=&quot;Dog Diving Underwater&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;thumbnail&quot;&gt;
+        &lt;img src=&quot;images/diving-dog-1-620x353.png&quot; width=&quot;150&quot; alt=&quot;Dog Diving Underwater&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;&lt;-- Clearing div ensures the row wraps around the thumbnails --&gt;
+&lt;/div&gt;
+&lt;div class=&quot;thumbnail-row&quot;&gt;
+    &lt;div class=&quot;thumbnail&quot;&gt;
+        &lt;img src=&quot;images/diving-dog-1-620x353.png&quot; width=&quot;150&quot; alt=&quot;Dog Diving Underwater&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;thumbnail&quot;&gt;
+        &lt;img src=&quot;images/diving-dog-1-620x353.png&quot; width=&quot;150&quot; alt=&quot;Dog Diving Underwater&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;thumbnail&quot;&gt;
+        &lt;img src=&quot;images/diving-dog-1-620x353.png&quot; width=&quot;150&quot; alt=&quot;Dog Diving Underwater&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;&lt;-- Clearing div ensures the row wraps around the thumbnails --&gt;
+&lt;/div&gt;</code></pre>
+                <div class="result">
+                    <h3 class="heading">Result</h3>
+                    <div class="thumbnail-row">
+                        <div class="thumbnail">
+                            <img src="images/diving-dog-1-620x353.png" width="150" alt="Dog Diving Underwater" />
+                        </div>
+                        <div class="thumbnail">
+                            <img src="images/diving-dog-1-620x353.png" width="150" alt="Dog Diving Underwater" />
+                        </div>
+                        <div class="thumbnail">
+                            <img src="images/diving-dog-1-620x353.png" width="150" alt="Dog Diving Underwater" />
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="thumbnail-row">
+                        <div class="thumbnail">
+                            <img src="images/diving-dog-1-620x353.png" width="150" alt="Dog Diving Underwater" />
+                        </div>
+                        <div class="thumbnail">
+                            <img src="images/diving-dog-1-620x353.png" width="150" alt="Dog Diving Underwater" />
+                        </div>
+                        <div class="thumbnail">
+                            <img src="images/diving-dog-1-620x353.png" width="150" alt="Dog Diving Underwater" />
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="thumbnail-row">
+                        <div class="thumbnail">
+                            <img src="images/diving-dog-1-620x353.png" width="150" alt="Dog Diving Underwater" />
+                        </div>
+                        <div class="thumbnail">
+                            <img src="images/diving-dog-1-620x353.png" width="150" alt="Dog Diving Underwater" />
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</body>
+</html>

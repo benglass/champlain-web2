@@ -1,0 +1,440 @@
+<!doctype html>  
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		
+		<title>HTML & CSS for Layout: Assignment 1</title>
+		
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/main.css">
+
+		<link rel="stylesheet" href="lib/zenburn.css">
+	</head>
+	
+	<body>
+		
+		<div id="reveal">
+			
+			<div class="slides">
+				<section id="intro-to-css">
+					<h1>HTML & CSS for Layout:<br />Assignment 1</h1>
+					<ul>
+						<li>Each slide represents a step in the assignment</li>
+						<li>The solutions for each step can be viewed by hitting the down arrow on each slide.</li>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<h2>Step 1: Create a New HTML Document</h2>
+						<ul>
+							<li>Create a new HTML document and save it as "lastname-firstname-gdd410-layout1.html"</li>
+							<li>Set the title to "Lastname Firstname | GDD 410 Layout 1 Assignment"</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Step 1: Solution</h2>
+<pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+	&lt;head&gt;
+		&lt;title&gt;Glassman Benjamin | GDD 410 Layout 1 Assignment&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+	
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+					</section>
+				</section>		
+				<section>
+					<section>
+						<h2>Step 2: Create a New CSS File</h2>
+						<ul>
+							<li>Create a new CSS file and save it in the same folder as "styles.css"</li>
+							<li>Write a css selector to set the font size on the body tag to 12 pixels and the leading/line height to 18 pixels.</li>
+							<li><strong>Note:</strong> The CSS examples in this slideshow display only the CSS for the current step. Each step involves adding more CSS to the styles.css, not replacing the content.</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Step 2: Solution</h2>
+<pre><code>body {
+	font-size: 12px;
+	line-height: 18px;
+}</code></pre>
+						<h3>Alternate solution</h3>
+<pre><code>body {
+	font-size: 12px;
+	line-height: 1.5em;
+}</code></pre>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Step 3: Link Your HTML & CSS</h2>
+						<ul>
+							<li>Add a link tag to the head of your HTML document to attach the stylesheet you created.</li>
+							<li>Use the href attribute to specify to url of the stylesheet (styles.css)</li>
+							<li>Set the rel attribute of the link tag to "stylesheet" to let the browser know the relevance of the linked document is that its a stylesheet.</li>
+							<li>Set the type attribute of the link tag to "text/css" to let the browser know type of stylesheet it is.</li>
+							<li>Set the media attribute of the link tag to "all" to specify that the stylesheet should be used for print, screen, mobile, etc.</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Step 3: Solution</h2>
+<pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+	&lt;head&gt;
+		&lt;title&gt;Glassman Benjamin | GDD 410 Layout 1 Assignment&lt;/title&gt;
+		&lt;link href="styles.css" rel="stylesheet" type="text/css" media="all" /&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+	
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Step 4: Container & Heading</h2>
+						<p>This HTML page will contain a list of blog posts. Lets add a level one heading to the page and a div tag that will contain our blog posts.</p>
+						<ul>
+							<li>Create a div tag inside the body tag with an id attribute set to "container".</li>
+							<li>Add a level one heading inside the div tag that says "My Blog"</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Step 4: Solution</h2>
+<pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+	&lt;head&gt;
+		&lt;title&gt;Glassman Benjamin | GDD 410 Layout 1 Assignment&lt;/title&gt;
+		&lt;link href="styles.css" rel="stylesheet" type="text/css" media="all" /&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div id="container">
+			&lt;h1&gt;My Blog&lt;/h1&gt;
+		&lt;/div&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Step 5: Add a Blog Post</h2>
+						<p>Lets add one blog post. The blog post should be wrapped in its own div tag and should include the following elements:</p>
+						<ul>
+							<li>Title (level 2 heading tag)</li>
+							<li>Date posted and author (paragraph tag)</li>
+							<li>Teaser (paragraph tag)</li>
+							<li>Link to "Read More" (paragraph tag with an anchor tag inside it)</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Step 5: Solution</h2>
+<pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+	&lt;head&gt;
+		&lt;title&gt;Glassman Benjamin | GDD 410 Layout 1 Assignment&lt;/title&gt;
+		&lt;link href="styles.css" rel="stylesheet" type="text/css" media="all" /&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div id="container">
+			&lt;h1&gt;My Blog&lt;/h1&gt;
+			&lt;div&gt;
+				&lt;h2&gt;Blog Post 1&lt;/h2&gt;
+				&lt;p&gt;Posted on March 3rd, 2012 by Ben Glassman&lt;/p&gt;
+				&lt;p&gt;Exciting teaser for blog post 1&lt;/p&gt;
+				&lt;p&gt;&lt;a href="post1.html"&gt;Read More&lt;/a&gt;&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Step 6: Add Descriptive Classes</h2>
+						<p>Our HTML is very generic right now, which will make it harder to style effectively. Lets add some descriptive classes to our blog post to use as hooks for our CSS</p>
+						<ul>
+							<li>Add a class of "post" to the div holding the post (<strong>Note:</strong> Not the div with the id of "container")</li>
+							<li>Add a class of "title" to the heading with the blog post title</li>
+							<li>Add a class of "date-author" to the paragraph holding the date posted and author</li>
+							<li>Add a class of "teaser" to the paragraph holding the teaser</li>
+							<li>Add a class of "read-more" to the paragraph holding the read more link</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Step 6: Solution</h2>
+<pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+	&lt;head&gt;
+		&lt;title&gt;Glassman Benjamin | GDD 410 Layout 1 Assignment&lt;/title&gt;
+		&lt;link href="styles.css" rel="stylesheet" type="text/css" media="all" /&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div id="container">
+			&lt;h1&gt;My Blog&lt;/h1&gt;
+			&lt;div class="post"&gt;
+				&lt;h2 class="title"&gt;Blog Post 1&lt;/h2&gt;
+				&lt;p class="date-author"&gt;Posted on March 3rd, 2012 by Ben Glassman&lt;/p&gt;
+				&lt;p class="teaser"&gt;Exciting teaser for blog post 1&lt;/p&gt;
+				&lt;p class="read-more"&gt;&lt;a href="post1.html"&gt;Read More&lt;/a&gt;&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Step 7: Add More Blog Posts</h2>
+						<p>What blog has only 1 post? Lets add 2 more blog posts using the same HTML template, but updating the content.</p>
+					</section>
+					<section>
+						<h2>Step 7: Solution</h2>
+<pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+	&lt;head&gt;
+		&lt;title&gt;Glassman Benjamin | GDD 410 Layout 1 Assignment&lt;/title&gt;
+		&lt;link href="styles.css" rel="stylesheet" type="text/css" media="all" /&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div id="container">
+			&lt;h1&gt;My Blog&lt;/h1&gt;
+			&lt;div class="post"&gt;
+				&lt;h2 class="title"&gt;Blog Post 1&lt;/h2&gt;
+				&lt;p class="date-author"&gt;Posted on March 3rd, 2012 by Ben Glassman&lt;/p&gt;
+				&lt;p class="teaser"&gt;Exciting teaser for blog post 1&lt;/p&gt;
+				&lt;p class="read-more"&gt;&lt;a href="post1.html"&gt;Read More&lt;/a&gt;&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class="post"&gt;
+				&lt;h2 class="title"&gt;Blog Post 2&lt;/h2&gt;
+				&lt;p class="date-author"&gt;Posted on March 5rd, 2012 by Ben Glassman&lt;/p&gt;
+				&lt;p class="teaser"&gt;Exciting teaser for blog post 2&lt;/p&gt;
+				&lt;p class="read-more"&gt;&lt;a href="post2.html"&gt;Read More&lt;/a&gt;&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class="post"&gt;
+				&lt;h2 class="title"&gt;Blog Post 2&lt;/h2&gt;
+				&lt;p class="date-author"&gt;Posted on March 3rd, 2012 by Ben Glassman&lt;/p&gt;
+				&lt;p class="teaser"&gt;Exciting teaser for blog post 2&lt;/p&gt;
+				&lt;p class="read-more"&gt;&lt;a href="post2.html"&gt;Read More&lt;/a&gt;&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Step 8: Post Separators</h2>
+						<p>Lets apply some styles to our posts. This step occurrs in our "styles.css" file. Lets add a gray border to the bottom of each post to separate them. Lets also add 20 pixels of padding to the top and bottom of each post.</p>
+						<ul>
+							<li>Write a new CSS selector that applies to each post.<br /><strong>Hint:</strong> The Class Selector is a period followed by the class name (.class)</li>
+							<li>Set the bottom border to 1 pixel, solid and gray (#999999)</li>
+							<li>Set the top and bottom padding to 20 pixels</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Step 8: Solution</h2>
+<pre><code>.post {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #999999;
+}</code></pre>						
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Step 9: Post Title Styling</h2>
+						<p>Lets apply some styles to our post headings. This step occurrs in our "styles.css" file. Remember, the title has a class of "title" and is inside of a div with a class of "post".</p>
+						<ul>
+							<li>Write a new CSS selector that applies to anything with a class of "title" inside anything with a class of "post".<br /><strong>Hint:</strong> You can separate selectors with a space to combine them (.class1 .class2 would apply to tags with "class2" that are inside tags with "class1")</li>
+							<li>Set the font family to Helvetica Neue, with a fallback to Arial and a generic family of sans serif.<br /><strong>Hint: </strong>You can separate fonts with commas to declare a series of fallback fonts called a font stack. The final item in the list is a generic family. Font names with spaces in them must be surrounded in single quotes.</li>
+							<li>Set the font size to 18 pixels</li>
+							<li>Set the leading/line height to 24 pixels</li>
+							<li>Remove bolding from the heading</li>
+							<li>Set the color to dark gray (#666666)</li>
+							<li>Set the top margin to 0</li>
+							<li>Set the bottom margin to 9 pixels</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Step 9: Solution</h2>
+
+<pre><code>.post .title {
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: normal;
+	color: #666666;
+	margin-top: 0;
+	margin-bottom: 9px;
+}</code></pre>						
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Step 10: Date & Author Styling</h2>
+						<p>Lets make the date and author lighter gray and italic.</p>
+						<ul>
+							<li>Write a CSS selector for the "date-author" class inside the "post" class.</li>
+							<li>Remove all margins</li>
+							<li>Set the color to medium gray (#999999)</li>
+							<li>Italicize the text</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Step 10: Solution</h2>
+
+<pre><code>.post .date-author {
+	margin: 0;
+	color: #999999;
+	font-style: italic;
+}</code></pre>						
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Step 11: Teaser Styling</h2>
+						<p>Lets increase the font size for the teaser.</p>
+						<ul>
+							<li>Write a CSS selector for the "teaser" class inside the "post" class.</li>
+							<li>Set the font size to 13 pixels</li>
+							<li>Remove all margins</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Step 11: Solution</h2>
+
+<pre><code>.post .teaser {
+	font-size: 13px;
+	margin: 0;
+}</code></pre>						
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Step 12: Read More Styling</h2>
+						<p>Lets set the color of the read more link to black with a red rollover.</p>
+						<ul>
+							<li>Remove margin from the read more paragraph</li>
+							<li>Make the read more links black (#000000) before the user has visited them</li>
+							<li>Make the read more links dark gray (#333333) after the user has visited them</li>
+							<li>Make the read more links red when hovered</li>
+							<li>Make the read more links pink when active</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Step 12: Solution</h2>
+
+<pre><code>.post .read-more {
+	margin: 0;
+}
+
+.post .read-more a:link {
+	color: #000000;
+}
+
+.post .read-more a:visited {
+	color: #333333;
+}
+
+.post .read-more a:hover {
+	color: red;
+}
+
+.post .read-more a:active {
+	color: pink;
+}</code></pre>						
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Step 13: Layout</h2>
+						<p>Lets center our container by giving it a width and  left/right margins of auto. We will also give it a white background and padding. Lets change the body background to dark gray.</p>
+						<ul>
+							<li>Set the background color of the body tag to gray (#666666)<br /><strong>Hint:</strong> Add this to your existing css selector for the body tag at the top of styles.css</li>
+							<li>Set the width of the container div to 960 pixels</li>
+							<li>Center the container div horizontally by setting left and right margins to auto</li>
+							<li>Set the background color of the container div to white (#FFFFFF)</li>
+							<li>Set padding on all sides of the container div to 36 pixels</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Step 13: Solution</h2>
+
+<pre><code>body {
+	background-color: #000000;
+}
+
+#container {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #FFFFFF;
+	padding: 36px;
+}</code></pre>						
+					</section>
+				</section>
+				<section>
+					<h2>Step 14: Validation</h2>
+					<p>Use the W3C's Free Validation services to verify there are no errors in your HTML or CSS. Once your HTML/CSS is validated and rendering properly, create a ZIP file and drop it to the GDD server Drop box.</p>
+					<ul>
+						<li><a href="http://jigsaw.w3.org/css-validator/">CSS Validator</a></li>
+						<li><a href="http://validator.w3.org/">HTML Validator</a></li>
+					</ul>
+				</section>
+			</div>
+
+
+			<!-- The navigational controls UI -->
+			<aside class="controls">
+				<a class="left" href="css-layout1-assignment.html#">&#x25C4;</a>
+				<a class="right" href="css-layout1-assignment.html#">&#x25BA;</a>
+				<a class="up" href="css-layout1-assignment.html#">&#x25B2;</a>
+				<a class="down" href="css-layout1-assignment.html#">&#x25BC;</a>
+			</aside>
+
+			<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
+			<div class="progress"><span></span></div>
+			
+		</div>
+		
+		<script src="js/reveal.js"></script>
+		<script src="lib/highlight.js"></script>
+		<script>
+			// Parse the query string into a key/value object
+			var query = {};
+			location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+				query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+			} );
+
+			Reveal.initialize({
+				// Display controls in the bottom right corner
+				controls: true,
+
+				// Display a presentation progress bar
+				progress: true,
+
+				// If true; each slide will be pushed to the browser history
+				history: true,
+
+				// Flags if mouse wheel navigation should be enabled
+				mouseWheel: true,
+
+				// Apply a 3D roll to links on hover
+				rollingLinks: true,
+
+				// UI style
+				theme: query.theme || 'default', // default/neon
+
+				// Transition style
+				transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
+			});
+
+			hljs.initHighlightingOnLoad();
+		</script>
+
+	</body>
+</html>

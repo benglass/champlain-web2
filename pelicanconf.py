@@ -25,6 +25,8 @@ DEFAULT_PAGINATION = 10
 
 THEME = 'themes/champlain'
 
+STATIC_PATHS = ['images', 'materials']
+
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 

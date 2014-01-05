@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>CSS Rollovers</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	</head>
+<style type="text/css">
+#mybtn {
+	background-image: url(http://www.sparklestories.com/assets/images/btn-shop-now.png);
+	background-repeat: no-repeat;
+	width: 131px;
+	height: 64px;
+	text-indent: -999em;
+}
+#mybtn a { 
+	display: block;
+   	width: 131px;
+   	outline: 1px solid blue;
+   	width: 131px;
+   	height: 32px;
+}
+
+/*
+#mybtn a {
+	background-image: url(http://www.sparklestories.com/assets/images/btn-shop-now.png);
+	width: 131px;
+	height: 32px;
+	text-indent: -999em;
+	display: block;
+	outline: 1px solid blue;
+}
+#mybtn a:hover, #mybtn a:active {
+	background-position: 0 -32px;
+}
+*/
+</style>
+	<body>
+		<div id="mybtn">
+			<a href="#">HEy there</a>
+		</div>
+<script language="javascript" type="text/javascript">
+
+$('#mybtn').hover(function() {
+
+	$(this).stop().animate({
+			backgroundPositionX: "0px",
+			backgroundPositionY: "-32px"
+		},
+		1000
+	);
+
+}, function() {
+
+	$(this).stop().animate({
+			backgroundPositionX: "0px",
+			backgroundPositionY: "0px"
+		},
+		1000
+	);
+	
+});
+
+</script>
+	</body>
+</html>

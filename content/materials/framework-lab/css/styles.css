@@ -1,0 +1,27 @@
+/*.container_16 {*/
+  /*background-image: url(../img/16_col.gif);*/
+/*}*/
+
+body { background: #ecece5 url(../img/bg-body.png) no-repeat 50% 0; }
+#container { position: relative; }
+#masthead { height: 104px; }
+#logo { position: absolute; left: 10px; top: 25px; }
+#logo-champlain { position: absolute; right: 10px; top: 25px; }
+#nav-primary {
+	position: absolute;
+	right: 10px;
+	top: 75px;
+}
+#nav-primary li, #nav-primary a { float: left; }
+#nav-primary li { margin-right: 30px; }
+#nav-primary li:last-child { margin: 0; }
+#nav-primary a { padding: 5px 10px; }
+#main { overflow: hidden; clear: both; }
+#banner { margin-bottom: 25px; }
+#sidebar { background: transparent url(../img/bg-sidebar.png) no-repeat 0 0; min-height: 722px; }
+#footer { background: transparent url(../img/bg-footer.png) no-repeat 0 0; min-height: 210px; position: relative; }
+#footer .logo-champlain { position: absolute; left: 40px; top: 90px; }
+#footer .copyright { position: absolute; right: 40px; top: 150px; color: #fff; }
+#nav-social { position: absolute; top: 50px; left: 620px; }
+#nav-social h2 { position: absolute; left: -999em; }
+/*div { outline: 1px solid red; }*/

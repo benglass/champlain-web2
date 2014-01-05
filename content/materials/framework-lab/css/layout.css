@@ -1,0 +1,51 @@
+body {
+	background-color: #ecece5;
+	background-image: url(../img/bg-body.png);
+	background-repeat: no-repeat;
+	background-position: 50% 0;	
+}
+
+#container {
+	position: relative;
+}
+
+#masthead { 
+	height: 104px;
+}
+
+#logo {
+	position: absolute;
+	left: 10px;
+	top: 25px;
+}
+
+#logo-champlain {
+	position: absolute;
+	right: 10px;
+	top: 18px;
+}
+
+#nav-primary {
+	position: absolute;
+	right: 8px;
+	top: 75px;
+}
+
+#nav-primary li {
+	float: left;
+}
+
+#banner {
+	margin-bottom: 22px;
+}
+
+#sidebar {
+	background-image: url(../img/bg-sidebar.png);
+	height: 722px;	
+}
+
+#footer {
+	background-image: url(../img/bg-footer.png);
+	height: 209px;	
+	clear: left;
+}

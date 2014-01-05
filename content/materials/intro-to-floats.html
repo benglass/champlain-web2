@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<title>Introduction Floats</title>
+		<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+		<style type="text/css" media="all">
+			.image-right {
+				float: right;
+				margin-left: 20px;
+				margin-bottom: 20px;
+			}
+			.image-right-caption {
+				float: right;
+				width: 200px;
+				margin-left: 20px;
+				margin-bottom: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Introduction to Floats</h1>
+			<h2>What is a Float?</h2>
+			<p class="well well-large">
+			A float is a box that is shifted to the left or right on the current line. The most interesting characteristic of a float (or “floated” or “floating” box) is that content may flow along its side (or be prohibited from doing so by the “clear” property). Content flows down the right side of a left-floated box and down the left side of a right-floated box.
+			</p>
+			<p>Normally, an HTML tag such as a p or div tag would render on its own line.</p>
+			<div class="well">
+				<h3>Example</h3>
+				<p>This is paragraph tag 1</p>
+				<p>This is paragraph tag 2</p>
+			</div>
+			<p>Sometimes, we want one paragraph or div tag to render to the right or left of another, with any subsequent content flowing around it.<br />This is commonly used for images in a content area.<br />The css property <strong>float</strong> can be used to push an HTML tag to the right or the left. The possible values are <strong>right</strong>, <strong>left</strong> or <strong>none</strong> (to remove an existing float).</p>
+			<div class="well clearfix">
+				<h3>Example</h3>
+				<h4>CSS</h4>
+				<code><pre>
+.image-right {
+	float: right;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+</pre></code>
+				<h4>HTML</h4>
+				<code><pre>
+&lt;div class="image-right"&gt;
+	&lt;img src="images/diving-dog-1-620x353.png" alt="Dog Diving Underwater" /&gt;
+&lt;/div&gt;
+&lt;p&gt;Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro. Nescio brains an Undead zombies. Sicut malus putrid voodoo horror. Nigh tofth eliv ingdead.&lt;/p&gt;
+&lt;p&gt;Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro. Nescio brains an Undead zombies. Sicut malus putrid voodoo horror. Nigh tofth eliv ingdead.&lt;/p&gt;
+				</pre></code>
+				<h4>Result</h4>
+				<div class="image-right">
+					<img src="images/diving-dog-1-620x353.png" width="200" alt="Dog Diving Underwater" />
+				</div>
+				<p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro. Nescio brains an Undead zombies. Sicut malus putrid voodoo horror. Nigh tofth eliv ingdead.</p>
+				<p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro. Nescio brains an Undead zombies. Sicut malus putrid voodoo horror. Nigh tofth eliv ingdead.</p>
+			</div>
+			<h2>Effects of applying a float</h2>
+			<p>Applying a float has the following effects</p>
+			<ol>
+				<li>The tag will be moved to the right or left of its current position.</li>
+				<li>Any subsequent tag will wrap around the tag</li>
+				<li>The floated tag's width will be the maximum size needed to contain whatever elements are inside of it. (If it contains a 600 pixel image, it will be 600 pixels, if it contains text, it will be as wide as is needed to contain the text on a single line).</li>
+				<li>The floated tag will no longer be contained by any parent elements which are not either floated or having overflow: hidden. This will be important later when we discuss floats for layout.</li>
+			</ol>
+			<p>Because of item #3, it is often necessary to declare a width along with a float. This is particularly the case if we want a caption for our image. Take a look at what happens when you have a div tag floated right and it contains an image and a long caption.</p>
+			<div class="well">
+				<h3>Example: Image with a Long Caption</h3>
+				<div class="image-right" style="border: 1px dashed red;">
+					<img src="images/diving-dog-1-620x353.png" width="200" alt="Dog Diving Underwater" />
+					<p class="caption">This is a dog which is underwater. It looks like an alien, but it is mostly harmless.</p>
+				</div>
+				<p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro. Nescio brains an Undead zombies. Sicut malus putrid voodoo horror. Nigh tofth eliv ingdead.</p>
+				<p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro. Nescio brains an Undead zombies. Sicut malus putrid voodoo horror. Nigh tofth eliv ingdead.</p>
+			</div>
+			<p>As you can see, the div tag is outlined in red and is exactly the width needed to keep all of the content inside it on a single line. In order to achieve our desired effect, we need to add a width to the div tag.</p>
+			<div class="well">
+				<h3>Example: Image with a Long Caption + Width</h3>
+				<h4>CSS</h4>
+<code><pre>
+.image-right-caption {
+	float: right;
+	width: 200px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+</pre></code>
+				<h4>Result</h4>
+				<div class="image-right-caption" style="border: 1px dashed red;">
+					<img src="images/diving-dog-1-620x353.png" width="200" alt="Dog Diving Underwater" />
+					<p class="caption">This is a dog which is underwater. It looks like an alien, but it is mostly harmless.</p>
+				</div>
+				<p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro. Nescio brains an Undead zombies. Sicut malus putrid voodoo horror. Nigh tofth eliv ingdead.</p>
+				<p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro. Nescio brains an Undead zombies. Sicut malus putrid voodoo horror. Nigh tofth eliv ingdead.</p>
+			</div>
+			<p>With the width applied, the image floats to the right and the caption is contained inside.</p>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,468 @@
+<!doctype html>  
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		
+		<title>Introduction to CSS</title>
+		
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/main.css">
+
+		<link rel="stylesheet" href="lib/zenburn.css">
+	</head>
+	
+	<body>
+		
+		<div id="reveal">
+			
+			<div class="slides">
+				<section id="intro-to-css">
+					<h1>Introduction to CSS</h1>
+					<ul>
+						<li>HTML is not for Design</li>
+						<li>CSS is for Design</li>
+						<li>CSS Rules & Properties</li>
+						<li>HTML & CSS Together</li>
+						<li>CSS Selectors</li>
+					</ul>
+				</section>	
+				<section>
+					<h2>What is HTML?</h2>
+					<p>HTML is a language for describing different types of content such as text, images, lists and videos.<p>
+				</section>
+				<section>
+					<h2>This is a Paragraph</h2>
+<pre><code>&lt;p&gt;The massive, frustrated energies of a mainly young, disillusioned electorate that has long since abandoned the idea that we all have a duty to vote. This is like being told you have a duty to buy a new car, but you have to choose immediately between a Ford and a Chevy.&lt;/p&gt;</pre></code>
+				</section>
+				<section>
+					<h2>This is an Image</h2>
+<pre><code>&lt;p&gt;&lt;img src="car.jpg" alt="A chevy" /&gt;&lt;/p&gt;</pre></code>
+				</section>
+				<section>
+					<h2>This is a List</h2>
+<pre><code>&lt;h2&gt;Groceries&lt;/h2&gt;
+&lt;ul&gt;
+	&lt;li&gt;Milk&lt;/li&gt;
+	&lt;li&gt;Eggs&lt;/li&gt;
+	&lt;li&gt;Orange Juice&lt;/li&gt;
+&lt;/ul&gt;</pre></code>
+				</section>
+
+				<section>
+					<h2>HTML is not for Design</h2>
+					<p>In the early days of HTML, there were tags and attributes available for determining how the content should be displayed. Consider using the following HTML code for your page headings.<p>
+<pre><code>&lt;font size="4" color="red" face="verdana"&gt;About Us&lt;/font&gt;</pre></code>
+				</section>	
+				<section>
+					<h2>What's the Problem?</h2>
+					<p>This approach might work fine for a 1 page website, but what problems would occur as you add additional pages?<p>
+<pre><code>&lt;font size="4" color="red" face="verdana"&gt;About Us&lt;/font&gt;</pre></code>
+					<ul>
+						<li class="fragment">Re-using styles requires us to copy the entire line of code</li>
+						<li class="fragment">Changing all headings requires editing all pages individually</li>
+					</ul>
+				</section>	
+				<section>
+					<h2>CSS is the Solution</h2>
+					<p>Using CSS we can separate the design from the content, making it easy to change one without changing the other.</p>
+					<h3>So instead of this...</h3>
+					<pre><code>&lt;font size="4" color="red" face="verdana"&gt;About Us&lt;/font&gt;</pre></code>
+					<div class="fragment">
+						<h3>We can do this</h3>
+<pre><code>&lt;style&gt;
+h1 {
+	font-size: 14px;
+	color: red;
+}
+&lt;/style&gt;
+
+&lt;h1&gt;About Us&lt;/h1&gt;</pre></code>
+					</div>
+				</section>	
+				<section>
+					<h2>What is CSS?</h2>
+					<p>CSS (<strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets) is a language for describing how HTML documents should be visually formatted in terms of typography, multi-column layout, decorative images, etc.</p>
+					<p>CSS can be placed into .css files and linked to HTML pages to allow their contents to be re-used on multiple pages of a website. This makes it easy to update the design of all pages on a website easily by editing a single file.</p>
+				</section>
+				<section>
+					<h2>CSS Rules</h2>
+					<p>The basic unit of CSS is called a <strong>rule</strong>.</p>
+					<p>A rule consists of a <strong>property</strong> and a <strong>value</strong> separated by a <strong>colon</strong>.</p>
+					<pre><code>font-size: 14px</pre></code>
+					<div class="fragment">
+						<p>Multiple rules can be combined by placing a <strong>semicolon</strong> between them</p>
+						<pre><code>font-size: 14px; line-height: 18px; color: red;</pre></code>
+					</div>
+				</section>
+				<section>
+					<h2>CSS Properties</h2>
+					<p>There are hundreds of CSS properties for changing everything from font size to color to adding background images and specifying the layout of a page. The following properties represent some of the more common ones.</p><p>
+					<p></p>
+					
+					<p>A full list can be found online at the W3C Schools website:</p>
+					<p><a href="http://www.w3schools.com/css/">W3C Schools CSS Tutorial</a></p>
+					<p><a href="http://www.w3schools.com/cssref/default.asp">W3C Schools CSS Reference</a></p>
+				</section>
+				<section>
+					<h2>CSS & HTML Together</h2>
+					<p>There are three ways to use CSS with HTML:</p>
+					<ul>
+						<li><strong>Inline</strong>: CSS Rules are attached directly to the HTML tag</li>
+						<li><strong>Embedded</strong>: CSS is placed in a separate section of the HTML document</li>
+						<li><strong>Linked</strong>: CSS is placed in a separate .css files and linked to the HTML document</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Inline CSS</h2>
+					<p>CSS can be attached directly to an HTML tag using the <strong>style</strong> attribute. The value of the style attribute is set to a series of CSS rules.</p>
+					<pre><code>&lt;p style="color: red"&gt;This paragraph is now red&lt;/p&gt;
+&lt;p style="font-weight: bold; color: red"&gt;This paragraph is now red AND bold&lt;/p&gt;</code></pre>
+					<p><strong>Pros</strong>: Easy, clear</p>
+					<p><strong>Cons</strong>: Not re-usable or maintainable (no better than the font tag example)</p>
+					<p><strong>When to Use</strong>: Almost never</p>
+				</section>
+				<section>
+					<h2>Embedded CSS</h2>
+					<p>All CSS for a page can be placed between <strong>style</strong> tags (not attributes).</p>
+<pre><code>&lt;style type="text/css"&gt;
+
+p {
+	font-weight: bold;
+	color: red;
+}
+
+&lt;/style&gt;</code></pre>
+					<p><strong>Pros</strong>: More re-usable & maintainable</p>
+					<p><strong>Cons</strong>: Not re-usable across multiple HTML pages</p>
+					<p><strong>When to Use</strong>: Styles that are only used by a single HTML page</p>
+				</section>
+				<section>
+					<h2>Linked CSS</h2>
+					<p>All CSS is placed a separate .css file (e.g. styles.css) and added to the HTML page using the <strong>link</strong> tag.</p>
+					<h3>Example:</h3>
+<p>Contents of <strong>styles.css</strong> (note: no <strong>style</strong> tags)</p>
+<pre><code>p {
+	font-weight: bold;
+	color: red;
+}</code></pre>
+<p>Inside the <strong>head</strong> tag of the the HTML Page</p>
+<pre><code>&lt;link rel="stylesheet" type="text/css" href="styles.css" media="all" /&gt;</code></pre>
+				</section>
+				<section>
+					<h2>Linked CSS</h2>
+					<p><strong>Pros</strong>: Re-usable across multiple HTML pages, easiest maintenance, easiest validation, update 100+ page website by changing 1 file</p>
+					<p><strong>Cons</strong>: ???</p>
+					<p><strong>When to Use</strong>: Almost always</p>
+					<h3>Example:</h3>
+					<pre><code>&lt;link rel="stylesheet" type="text/css" href="styles.css" media="all" /&gt;</code></pre>
+				</section>
+				<section>
+					<h2>A New Problem</h2>
+					<p>When the CSS was applied directly to our tags in the <strong>Inline</strong> technique, it was very clear to what element the CSS was being applied.</p>
+					<pre><code>&lt;p style="color: red"&gt;This paragraph is red&lt;/&gt;</code></pre>
+					<p>But with our CSS separated from our HTML using either the <strong>Embedding</strong> or <strong>Linking</strong> technique, how does the browser know which CSS rules should be applied to which HTML tags?</p>
+					<pre><code>color: red</code></pre>
+					<pre><code>&lt;p&gt;This paragraph should be red&lt;/&gt;</code></pre>
+				</section>
+				<section>
+					<h2>A New Solution: CSS Selectors</h2>
+					<p>A <strong>CSS Selector</strong> describes which HTML tags the CSS rules should apply to. For example, to apply some CSS to all paragraph tags on a page, you would use the selector <strong>p</strong> followed by the CSS rules. CSS rules are grouped together using curly braces {}:</p>
+<pre><code>p {
+	color: red;
+}</code></pre>
+					<p>In the example above, <strong>p</strong> is the selector and the CSS rule is that the color property should be set to red. The effect of this rule would be to make all text inside of paragraph tags red. This rule would apply to the following HTML:</p>
+					<pre><code>&lt;p&gt;This paragraph would turn red&lt;/p&gt;
+&lt;p&gt;... and so would this one&lt;/&gt;</code></pre>
+				</section>
+				<section>
+					<h2>CSS Selectors: The Tag Selector</h2>
+					<p>The <strong>Tag Selector</strong> is used to select specific HTML tags (a, img, p, body, etc.) and apply CSS rules to all of them (all paragraphs, all images, etc.). It takes the form of the HTML code for the HTML tag without the &lt; and &gt; symbols.</p>
+					<h3>Examples</h3>
+<pre><code>p {
+	color: red;
+}
+
+img {
+	border: 1px solid #000000;
+}
+
+body {
+	font-size: 16px;
+}</code></pre>
+				</section>
+				<section>
+					<h2>CSS Selectors: The Class Selector (.)</h2>
+					<p>The <strong>Class Selector</strong> selects all HTML tags that have a certain value for their <strong>class</strong> attribute. It takes the form of a period (.) followed immediately by the name of the class (no spaces). Any HTML tag can use the class attribute and multiple tags can share the same class (there can be more than one element with a class of "caption")</p>
+					<h3>Example CSS</h3>
+<pre><code>.caption {
+	text-transform: lowercase;
+}
+</code></pre>
+					<h3>Matching HTML</h3>
+					<pre><code>&lt;p class="caption"&gt;This paragraph has a class of "caption" and therefore will be changed to lowercase&lt;/p&gt;
+&lt;p&gt;This paragraph would not match&lt;/&gt;</code></pre>
+				</section>
+				<section>
+					<h2>CSS Selectors: The ID Selector (#)</h2>
+					<p>The <strong>ID Selector</strong> selects all HTML tags that have a certain value for their <strong>id</strong> attribute. It takes the form of a pound symbol (#) followed immediately by the name of the id (no spaces).  Any HTML tag can use the id attribute but each id must be unique (there can be only one tag with an id of "masthead")</p>
+					<h3>Example CSS</h3>
+<pre><code>#masthead {
+	background-color: black;
+}
+</code></pre>
+					<h3>Matching HTML</h3>
+					<pre><code>&lt;div id="masthead"&gt;Paint it Black&lt;/div&gt;</code></pre>
+				</section>
+				<section>
+					<h2>CSS Selectors: Combining Selectors</h2>
+					<p>Selectors can be combined by placing a space between them. This represents a child relationship, meaning you are looking for HTML tags that match the second selector that are WITHIN other HTML tags that match the first selector.</p>
+					<h3>Example CSS</h3>
+<pre><code>#masthead a {
+	text-decoration: underline;
+}
+</code></pre>
+					<h3>Matching HTML</h3>
+					<pre><code>&lt;div id="masthead"&gt;
+	&lt;a href="index.html"&gt;This link now has an underline&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+				</section>
+				<section>
+					<h2>Text Properties: Alignment</h2>
+					<p><strong>text-align</strong>: Control alignment of text.<br />Values: left, center, right, justify</p>
+					<h3>Examples</h3>
+					<pre><code>text-align: center</code></pre>
+					<pre><code>text-align: right</code></pre>
+				</section>
+				<section>
+					<h2>Text Properties: Leading/Line Height</h2>
+					<p><strong>line-height</strong>: Amount of leading + unit. Same units as text. <br />Note: EMs are useful here.</p>
+					<h3>Examples</h3>
+					<pre><code>line-height: 18px</code></pre>
+					<pre><code>line-height: 1.5em</code></pre>
+				</section>
+				<section>
+					<h2>Text Properties: Bold</h2>
+					<p><strong>font-weight</strong>: Keyword (normal, bold) OR numeric weight (200, 800) if font supported.</p>
+					<h3>Examples</h3>
+					<pre><code>font-weight: bold</code></pre>
+					<pre><code>font-weight: 800</code></pre>
+					<pre><code>font-weight: normal</code></pre>
+				</section>
+				<section>
+					<h2>Text Properties: Italic</h2>
+					<p><strong>font-style</strong>: Keyword (normal, italic, oblique)</p>
+					<h3>Examples</h3>
+					<pre><code>font-style: italic</code></pre>
+					<pre><code>font-style: normal</code></pre>
+				</section>
+				<section>
+					<h2>Text Properties: Underlines, Overlines, etc.</h2>
+					<p><strong>text-decoration</strong>: Keyword (none, underline, line-through, overline, blink)<br />Note: Useful for adding/removing underlines to links</p>
+					<h3>Examples</h3>
+					<pre><code>text-decoration: none</code></pre>
+					<pre><code>text-decoration: underline</code></pre>
+				</section>
+				<section>
+					<h2>Text Properties: Changing Case</h2>
+					<p><strong>text-transform</strong>: Keyword (none, capitalize, uppercase, lowercase)<br />Note: Useful for heading styles</p>
+					<h3>Examples</h3>
+					<pre><code>text-transform: uppercase</code></pre>
+					<pre><code>text-transform: lowercase</code></pre>
+					<pre><code>text-transform: none</code></pre>
+				</section>
+
+				<section>
+					<h2>Typefaces in CSS: Font Stacks</h2>
+					<p>Since fonts on web pages are loaded from the user's computer, CSS includes a concept of a <strong>Font Stack</strong>, or a list of fonts to use in order from left to right. If the first font is not found, the second will be used and on down the line.</p><p>Fonts in a stack are separated by a comma and the last item in the list can be a generic font type to use if none of the fonts are found (serif, sans-serif, monospace). Any font names with spaces in them are enclosed in single quotes (e.g. 'Times New Roman'). Webfonts loaded from Google or other sources are declared in the same way as regular fonts once they have been added to the page.</p>
+					
+				</section>
+				<section>
+					<h2>Text Properties: Font Family</h2>
+					
+					<p><strong>font-family</strong>: font1, font2, generic font</p>
+					<h3>Examples</h3>
+					<pre><code>font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif</code></pre>
+					<pre><code>font-family: Georgia, Times, 'Times New Roman', serif</code></pre>
+					<pre><code>font-family: 'Palatino Linotype', 'Book Antiqua', serif</code></pre>
+				</section>
+
+				<section>
+					<h2>Units in CSS: Absolute Units</h2>
+					<p>Whenever you are specifying a numeric value in CSS (font size, width, margins, etc.) you have to declare the value followed by the unit with no space in between. The only exception is 0, which requires no unit. There are two types of units: <strong>Absolute</strong> and <strong>Relative</strong>. Absolute units represent a specific numeric value (18 pixels, for example).</p>
+					<div class="fragment">
+						<h3>Points (pt)</h3>
+						<p>Standard point sizing. For print stylesheets only.</p>
+						<pre><code>font-size: 18pt</code></pre>
+					</div>
+					<div class="fragment">
+						<h3>Pixels (px)</h3>
+						<p>Size in pixels, the standard unit for web sites.</p>
+						<pre><code>font-size: 18px</code></pre>
+					</div>
+				</section>
+				<section>
+					<h2>Units in CSS: Relative Units</h2>
+					<p>Relative units are calculated based on the default value.<br />If the default is 18px and 200% is used, 36px is the result</p>			
+					<div class="fragment">		
+						<h3>Percent (%)</h3>
+						<p>Based on the default size. 200% = double the size. 50% = half the size.</p>
+						<pre><code>font-size: 200%</code></pre>
+					</div>
+					<div class="fragment">
+						<h3>Em (em)</h3>
+						<p>Relative, multiple by default font size. If font size is 12 and 1.5em is used, resulting font size is 18 (12 x 1.5)</p>
+						<pre><code>font-size: 1.5em</code></pre>
+					</div>
+				</section>				
+				<section>
+					<h2>Text Properties: Size</h2>
+					<p><strong>font-size</strong>: Size of the text + unit (no space between). <br />Valid units: Points (pt), Pixels (px), Percent (%), Ems (em).</p>
+					<pre><code>font-size: 18px</code></pre>
+					<pre><code>font-size: 200%</code></pre>
+					<pre><code>font-size: 1.5em</code></pre>
+				</section>
+				<section>
+					<h2>Text Properties: Shorthand</h2>
+					<p>CSS allows you to specify the font size, leading, family, style and weight all in one line with the shorthand <strong>font</strong> property.</p>
+					<p><strong>font</strong>: style weight size/line-height family</p>
+					<h3>Examples</h3>
+					<pre><code>font: italic bold 12px/18px Arial, sans-serif</code></pre>
+					<pre><code>font: 22px/1.5em Georgia, 'Times New Roman', serif</code></pre>
+					<pre><code>font: bold 14pt/20pt 'Helvetica Neue', sans-serif</code></pre>
+				</section>
+
+				<section>
+					<h2>Color in CSS</h2>
+					<p>Whenever you are specifying color in CSS there are 3 methods: <strong>Hex Code</strong>, <strong>RGB Value</strong>, and <strong>Keyword</strong>. Hex Code is a 6 digit alphanumeric value (letters and numbers) preceeded by a pound symbol (#). It is easily retrieved in Photoshop and is the standard method in CSS. Keywords are rarely used as there is not a keyword for every color.</p>
+					<h3>Example: The Color White</h3>
+					<p>
+					<strong>Keyword:</strong> white<br />
+					<strong>Hex Code:</strong> #FFFFFF<br />
+					<strong>RGB:</strong> rgb(255, 255, 255)</p>
+				</section>
+
+				<section>
+					<h2>Text Properties: Color</h2>
+					<p><strong>color</strong>: Keyword OR Hex Code OR RGB</p>
+					<h3>Examples</h3>
+					<pre><code>color: white</code></pre>
+					<pre><code>color: #F3F3F3</code></pre>
+					<pre><code>color: rgb(255, 255, 255)</code></pre>
+				</section>
+				<section>
+					<h2>Background Properties</h2>
+					<p>Background images are a very important component in CSS. They are used for everything from bullets in lists to advanced column layouts. A background image is applied to an HTML element (like a paragraph) and you can specify what image to use, whether and how it should be tiled and where it should be positioned.</p>
+				</section>
+				<section>
+					<h2>Background Properties: Color</h2>
+					<p><strong>background-color</strong>: Keyword (red, blue) OR Hex Code (#000000) OR RGB (rgb(0, 0, 0)). The transparent keyword can also be used.<br />Note: Hex codes are the standard format & easily copied from Photoshop</p>
+					<h3>Examples</h3>
+					<pre><code>background-color: transparent</code></pre>					<pre><code>background-color: black</code></pre>
+					<pre><code>background-color: #000000</code></pre>
+					<pre><code>background-color: rgb(0, 0, 0)</code></pre>
+				</section>
+				<section>
+					<h2>Background Properties: Image</h2>
+					<p><strong>background-image</strong>: url(path/to/image.gif)<br />Note: This is relative to your CSS file</p>
+					<h3>Examples</h3>
+					<pre><code>background-image: url(../images/smiley.png)</code></pre>
+					<pre><code>background-image: url(rounded-corners.png)</code></pre>
+					<pre><code>background-image: url(http://google.com/logo.png)</code></pre>
+				</section>
+				<section>
+					<h2>Background Properties: Repeat</h2>
+					<p><strong>background-repeat</strong>: repeat-x, repeat-y, repeat or no-repeat</p>
+					<h3>Examples</h3>
+					<pre><code>background-repeat: no-repeat</code></pre>
+					<pre><code>background-repeat: repeat-y</code></pre>
+					<pre><code>background-repeat: repeat-X</code></pre>
+				</section>
+				<section>
+					<h2>Background Properties: Position</h2>
+					<p><strong>background-position</strong>: This property defines where the background is positioned within the HTML element. This is only relevant when the repeat is NOT set to repeat. The first value is the x position and the second is the y position. The two values are separated by a space.</p>
+					<p>These values can be specified either using keywords or numeric values. Keywords include: left, right, top, bottom, center. Numeric values must include units unless they are 0</p>
+				</section>
+				<section>
+					<h2>Background Properties: Position</h2>
+					<p><strong>background-position</strong>: x y</p>
+					<h3>Example: 50 pixels from the left, 100 pixels from the top</h3>
+					<pre><code>background-position: 50px 100px</code></pre>
+					<h3>Example: Centered</h3>
+					<pre><code>background-position: center center</code></pre>
+					<pre><code>background-position: 50% 50%</code></pre>
+					<h3>Example: Bottom Right</h3>
+					<pre><code>background-position: right bottom</code></pre>
+					<pre><code>background-position: 100% 100%</code></pre>
+				</section>
+				<section>
+					<h2>Background Properties: Shorthand</h2>
+					<p>CSS allows you to specify the background color, image, repeat and position all in one line using the shorthand <strong>background</strong> property.</p>
+					<p><strong>background</strong>: color url repeat position</p>
+					<h3>Example</h3>
+					<pre><code>background: transparent url(../images/bg.png) no-repeat center center</code></pre>
+					<pre><code>background: #000000 url(rounded-corners.png) repeat-x 0 100%</code></pre>
+					<pre><code>background: red url(divider.png) repeat-y right top</code></pre>			</section>
+				<section>
+					<h2>List Properties: Type</h2>
+					<p><strong>list-style-type</strong>: Keyword (none, circle,upper-roman, etc.)</p>
+					<h3>Examples</h3>
+					<pre><code>list-style-type: none</code></pre>
+					<pre><code>list-style-type: square</code></pre>
+					<pre><code>list-style-type: lower-alpha</code></pre>
+				</section>
+			</div>
+
+
+			<!-- The navigational controls UI -->
+			<aside class="controls">
+				<a class="left" href="css-intro.html#">&#x25C4;</a>
+				<a class="right" href="css-intro.html#">&#x25BA;</a>
+				<a class="up" href="css-intro.html#">&#x25B2;</a>
+				<a class="down" href="css-intro.html#">&#x25BC;</a>
+			</aside>
+
+			<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
+			<div class="progress"><span></span></div>
+			
+		</div>
+		
+		<script src="js/reveal.js"></script>
+		<script src="lib/highlight.js"></script>
+		<script>
+			// Parse the query string into a key/value object
+			var query = {};
+			location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+				query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+			} );
+
+			Reveal.initialize({
+				// Display controls in the bottom right corner
+				controls: true,
+
+				// Display a presentation progress bar
+				progress: true,
+
+				// If true; each slide will be pushed to the browser history
+				history: true,
+
+				// Flags if mouse wheel navigation should be enabled
+				mouseWheel: true,
+
+				// Apply a 3D roll to links on hover
+				rollingLinks: true,
+
+				// UI style
+				theme: query.theme || 'default', // default/neon
+
+				// Transition style
+				transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
+			});
+
+			hljs.initHighlightingOnLoad();
+		</script>
+
+	</body>
+</html>

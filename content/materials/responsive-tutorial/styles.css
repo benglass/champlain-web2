@@ -1,0 +1,239 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+Colors
+Blue (Light): #7EB5D6;
+Blue (Medium): #2A75A9;
+Blue (Dark): #274257;
+Brown (Light): #DFC184;
+Brown (Medium): #8F6048;
+Brown (Dark): #644436;
+*/
+
+/*
+Font Sizes
+Base: 1em (16px)
+Alpha: 0.75em (12px)
+Beta: 1em (16px)
+Gamma: 1.25em (20px)
+Delta: 1.5em (24px)
+Epsilon: 2.25em (36px)
+*/
+
+/*
+Typography */
+
+h1, h2, h3 { 
+	font-family: league-gothic, sans-serif;
+	font-weight: normal;
+	margin:  0 0 0.75em;
+}
+
+h1 { font-size: 2.25em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.25em; }
+
+p, li {  font-size: 0.75em; }
+p { margin-bottom: 1em; }
+
+.image-right {
+	float: right;
+	margin: 0 0 10px 10px;
+}
+
+/*
+Framework */
+
+body { 
+	font: 100%/1.5em noticia-text, serif; /* 16px */
+	background: #7EB5D6;
+}
+
+#container {
+	margin: 0 auto;
+	width: 90%;
+	position: relative;
+}
+
+#logo {
+	position: absolute;
+	top: 20px;
+	left: 0;
+	width: 200px;
+	text-align: center;
+}
+
+#logo a {
+	border-radius: 10px;
+	background: #2A75A9;
+	padding: 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #fff;
+	font: 2.25em league-gothic, sans-serif;
+	display: block;
+}
+
+#logo a:hover {
+	opacity: 0.8;	
+}
+
+#nav-primary {
+	float: right;
+	margin: 35px 0;
+	border-radius: 5px;
+	background: #274257;
+}
+
+#nav-primary ul { margin: 0; overflow: hidden; }
+#nav-primary li {
+	float: left;
+	font-size: 1.25em;
+	font: 1.25em league-gothic, sans-serif;
+	text-transform: lowercase;
+}
+#nav-primary a { text-decoration: none; display: block; padding: 0.5em 1em; }
+#nav-primary a:link, #nav-primary a:visited {
+	color: #7EB5D6;
+}
+#nav-primary a:hover, #nav-primary a:active {
+	color: #fff;
+}
+
+#main {
+	clear: both;
+}
+
+#content { 
+	border-radius: 10px;
+	background:  #fff;
+	float:  left;
+	width: 60%;
+	padding: 5%;
+	margin-right:  5%;
+}
+
+#sidebar { 
+	float:  left;
+	padding: 15px 5% 15px 0;
+	width: 20%;
+}
+
+#footer { 
+	text-align: center;
+	clear: both;
+	padding: 10px 0;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Desktop Large (> 1200px)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+@media (min-width: 1200px) {
+	#container {
+		width: 1100px;
+		margin: 0 auto;
+	}
+}
+
+/* ---------------------------------------------------
+ Smartphones
+--------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+	h1 {
+		font-size: 1.5em;
+	}
+
+	.image-right { float: none; margin-left: 0; }
+
+	img {
+		max-width: 100%;
+	}
+
+	#logo {
+		position: static;
+		margin: 0 auto;
+		width: 150px;
+	}
+
+	#logo a {
+		font-size: 1.5em;
+	}
+
+	#nav-primary {
+		float: none;
+		width: 100%;
+		text-align: center;
+		margin: 10px 0;
+	}
+
+	#nav-primary li {
+		float: none;
+		display: inline;
+	}
+
+	#nav-primary a {
+		display: inline-block;
+		padding: 0.5em;
+	}
+
+	#content {
+		width: 80%;
+		padding: 10%;
+		float: none;
+	}
+
+	#sidebar {
+		width: 100%;
+		float: none;
+	}
+
+}

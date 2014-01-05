@@ -1,0 +1,610 @@
+<!doctype html>  
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		
+		<title>HTML & CSS for Layout 2</title>
+		
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/main.css">
+
+		<link rel="stylesheet" href="lib/zenburn.css">
+	</head>
+	
+	<body>
+		
+		<div id="reveal">
+			
+			<div class="slides">
+				<section id="intro-to-css">
+					<h1>HTML & CSS for Layout 2</h1>
+					<ul>
+						<li>Common Elements of a Web Page Layout</li>
+						<li>HTML Comments</li>
+						<li>Re-usable HTML Skeleton</li>
+						<li>CSS: Floats</li>
+						<li>CSS: Positioning</li>
+					</ul>
+				</section>	
+				<section>
+					<h2>Common Website Layout Elements</h2>
+					<p>There are many global layout elements that are shared by most websites, regardless of their content or design. Which ones can you think of?<p>
+					<ul>
+						<li class="fragment">Masthead</li>
+						<li class="fragment">Logo</li>
+						<li class="fragment">Tagline</li>
+						<li class="fragment">Primary Navigation</li>
+						<li class="fragment">Primary Content</li>
+						<li class="fragment">Secondary Content (Sidebar)</li>
+						<li class="fragment">Footer</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Common Website Element IDs</h2>
+					<p>Since these elements tend to appear on most websites, it makes sense to adopt some conventions for how we write our base HTML so that we can re-use some of it from site to site.</p>
+					<p><strong>&lt;div&gt;</strong> tags are commonly used to group these global layout areas together. Since there is only one of each of these elements per page (1 masthead, 1 footer, etc.) we use unique id attributes to identify the different areas. These ids can be used in our CSS later when we construct the layout.</p>
+					<p>For consistency and code re-use purposes, it is a good idea to decide on some generic IDs to use over and over across your projects. Some commonly used IDs are:</p>
+					<ul>
+						<li>masthead</li>
+						<li>logo</li>
+						<li>tagline</li>
+						<li>navigation/nav/nav-primary</li>
+						<li>content/content-primary</li>
+						<li>sidebar/content-secondary</li>
+						<li>footer/site-info</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Re-usable HTML Skeleton</h2>
+					<p>We can combine the common elements/ids we just discussed to create a generic HTML skeleton that can be used for most HTML layouts. To begin, we create a div to hold the entire site, which is often given the id "container", "wrapper" or "bucket".</p>
+<pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+	&lt;head&gt;
+		&lt;title&gt;HTML Skeleton&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div id="container"&gt;
+		
+		&lt;/div&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				</section>
+
+				<section>
+					<h2>HTML Comments</h2>
+					<p>One good habit is to include an HTML comment with the div ID right after the closing div. This helps you to find extra/missing closing DIVs when your layout gets more complex. An HTML comment takes the following form:</p>
+					<pre><code>&lt;!-- YOUR COMMENT TEXT --&gt; </p></code></pre>
+					<p>Anything within a comment will not be shown to the user. Here is the container example with the extra comment.</p>
+<pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+	&lt;head&gt;
+		&lt;title&gt;HTML Skeleton&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div id="container"&gt;
+		
+		&lt;/div&gt;&lt;!-- #container --&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				</section>
+
+				<section>
+					<h2>HTML Skeleton: Masthead</h2>
+					<p>Every website includes a masthead area with a logo that links back to the home page. Lets add this to our template.</p>
+<pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+	&lt;head&gt;
+		&lt;title&gt;HTML Skeleton&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div id="container"&gt;	
+			
+			&lt;div id="masthead"&gt;				
+				&lt;div id="logo"&gt;&lt;a href="/"&gt;Company Name&lt;/a&gt;&lt;/div&gt;<html xmlns="http://www.w3.org/1999/xhtml">
+				&lt;div id="tagline"&gt;Tagline&lt;/div&gt;
+			&lt;/div&gt;&lt;!-- #masthead --&gt;
+			
+		&lt;/div&gt;&lt;!-- #container --&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				<p><strong>Note:</strong> The link (anchor tag) back to the home page has an href (the URL to link to) attribute of "/". This is a shortcut for taking the user back to the root/home page of the site. We would also end up replacing the text "Company Name" with an &lt;img&gt; tag of the company logo in most cases.</p>
+				</section>
+
+				<section>
+					<h2>HTML Skeleton: Navigation</h2>
+					<p>Lets add navigation to our template. The most appropriate HTML tag for navigation links is an unordered list.</p>
+<pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+	&lt;head&gt;
+		&lt;title&gt;HTML Skeleton&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div id="container"&gt;	
+			
+			&lt;div id="masthead"&gt;				
+				&lt;div id="logo"&gt;&lt;a href="/"&gt;Company Name&lt;/a&gt;&lt;/div&gt;
+				&lt;div id="tagline"&gt;Tagline&lt;/div&gt;
+			&lt;/div&gt;&lt;!-- #masthead --&gt;
+			
+			&lt;div id="navigation"&gt;				
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;&lt;!-- #navigation --&gt;
+			
+		&lt;/div&gt;&lt;!-- #container --&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				<p>For our template we will only include the home link, since the actual navigation links will vary from site to site. For each new navigation link we will just add another list item to the unordered list.</p>
+				</section>
+
+				<section>
+					<h2>HTML Skeleton: Primary Content</h2>
+					<p>Lets add a div for our primary content. We will include the level 1 heading in this div for the page heading.</p>
+<pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+	&lt;head&gt;
+		&lt;title&gt;HTML Skeleton&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div id="container"&gt;	
+			
+			&lt;div id="masthead"&gt;				
+				&lt;div id="logo"&gt;&lt;a href="/"&gt;Company Name&lt;/a&gt;&lt;/div&gt;
+				&lt;div id="tagline"&gt;Tagline&lt;/div&gt;
+			&lt;/div&gt;&lt;!-- #masthead --&gt;
+			
+			&lt;div id="navigation"&gt;				
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;&lt;!-- #navigation --&gt;
+			
+			&lt;div id="content"&gt;				
+				&lt;h1&gt;Page Heading&lt;/h1&gt;
+			&lt;/div&gt;&lt;!-- #content --&gt;
+			
+		&lt;/div&gt;&lt;!-- #container --&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				<p>Our actual page content will go under the page heading.</p>
+				</section>
+
+				<section>
+					<h2>HTML Skeleton: Footer</h2>
+					<p>Finally, we include a div at the bottom for our footer. The footer will contain a copyright notice and repeated primary navigation in text format.</p>
+<pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+	&lt;head&gt;
+		&lt;title&gt;HTML Skeleton&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div id="container"&gt;	
+			
+			&lt;div id="masthead"&gt;				
+				&lt;div id="logo"&gt;&lt;a href="/"&gt;Company Name&lt;/a&gt;&lt;/div&gt;
+				&lt;div id="tagline"&gt;Tagline&lt;/div&gt;
+			&lt;/div&gt;&lt;!-- #masthead --&gt;
+			
+			&lt;div id="navigation"&gt;				
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;&lt;!-- #navigation --&gt;
+			
+			&lt;div id="content"&gt;				
+				&lt;h1&gt;Page Heading&lt;/h1&gt;
+			&lt;/div&gt;&lt;!-- #content --&gt;
+			
+			&lt;div id="footer"&gt;				
+				&lt;p&gt;&amp;copy; 2012 Company Name.&lt;/p&gt;
+				&lt;p&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/p&gt;
+			&lt;/div&gt;&lt;!-- #footer --&gt;
+			
+		&lt;/div&gt;&lt;!-- #container --&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+				</section>
+
+				<section>
+					<h2>HTML Skeleton: CSS</h2>
+					<p>Last but not least, lets include a link to a stylesheet called styles.css. You may want to create this file in the same folder as the HTML skeleton we created so when you start a new project, you can simply copy these 2 files.</p>
+<pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+	&lt;head&gt;
+		&lt;title&gt;HTML Skeleton&lt;/title&gt;
+		&lt;link href="styles.css" rel="stylesheet" type="text/css" media="all" /&gt;		
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div id="container"&gt;	
+			
+			&lt;div id="masthead"&gt;				
+				&lt;div id="logo"&gt;&lt;a href="/"&gt;Company Name&lt;/a&gt;&lt;/div&gt;
+				&lt;div id="tagline"&gt;Tagline&lt;/div&gt;
+			&lt;/div&gt;&lt;!-- #masthead --&gt;
+			
+			&lt;div id="navigation"&gt;				
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;&lt;!-- #navigation --&gt;
+			
+			&lt;div id="content"&gt;				
+				&lt;h1&gt;Page Heading&lt;/h1&gt;
+			&lt;/div&gt;&lt;!-- #content --&gt;
+			
+			&lt;div id="footer"&gt;				
+				&lt;p&gt;&amp;copy; 2012 Company Name.&lt;/p&gt;
+				&lt;p&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/p&gt;
+			&lt;/div&gt;&lt;!-- #footer --&gt;
+			
+		&lt;/div&gt;&lt;!-- #container --&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				</section>
+
+				<section>
+					<h2>CSS for Layout</h2>
+					<img style="float: right; margin-left: 18px;" src="assets/breakingbad1.jpg" width="200" />
+					<p>By default, the HTML skeleton we just created is vertically oriented. Since the div tags are display: block by default, they simply take up 100% of the available width and include line breaks beneath them. Most websites do not lay out this way (although it is common for mobile versions). What we need is a way to go from this vertical stacking orientation to a horizontal stacking orientation. This is where <strong>floats</strong> come in.</p>
+					<p>It is helpful to think of floats in terms of images in magazine layout, as that is the original problem they were created to solve. In magazine/newspaper layouts, images commonly float on the right or left of the column, with text flowing automatically around them.</p>
+					<p>The image to the right is an example of a floated image. This text will flow around the image automatically, occupying any available space. Floats are still used for this purpose, whenever you want text to wrap around an image (commonly in employee bios, product detail pages, etc.). The behavior of the image to the right comes from the following CSS: </p>
+				<pre><code>img {
+	float: right
+}</code></pre>
+				</section>
+
+				<section>
+					<h2>CSS: Floats</h2>
+					<p>The float an image, you can use the <strong>float</strong> CSS property.</p>
+					<h3>Values</h3>
+					<ul>
+						<li><strong>left</strong> Float the element to the left. Text will flow around it on the right.<pre><code>float: left</code></pre></li>
+						<li><strong>right</strong> Float the element to the right. Text will flow around it on the left.<pre><code>float: right</code></pre></li>
+						<li><strong>none</strong> Used to remove floating behavior from an element.<pre><code>float: none</code></pre></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Floats for Layout</h2>
+					<p>But floats can do so much more than that. In fact, floats are the primary approach to creating column layotus in CSS. Floats can be applied to any HTML element (not just images). By applying floats to div tags, we can create multi column layouts. This is because 2 elements that are floated will appear side by side. <strong>Note</strong> Borders are just for clarity.</p>
+					<h3>CSS</h3>
+<pre><code>div {
+	float: left;
+}</code></pre>
+					<h3>HTML</h3>
+<pre><code>&lt;div&gt;Div A&lt;/div&gt;
+&lt;div&gt;Div B&lt;/div&gt;</code></pre>
+					<h3>Result</h3>
+					<div style="float: left; border: 1px solid green;">Div A</div>
+					<div style="float: left; border: 1px solid blue;">Div B</div>
+				</section>
+
+				<section>
+					<h2>Floats & Width: The Shrink Wrap Effect</h2>
+					<p>In the previous example, you probably noticed that the div tags no longer take up the 100% width they normally would. Floating any element causes it to "shrink wrap" to the size of its content. So if we increase the size of the content in those divs, the width will increase.</p>
+<p>For this reason, you almost always declare a width when you float div tags for layout purposes. This allows you to specify exactly how wide they should be and the content will wrap as necessary.</p>
+					<h3>Example</h3>
+					<div style="float: left; border: 1px solid green;">Div A has a lot more content and gets wide</div>
+					<div style="float: left; border: 1px solid blue;">Div B</div>
+				</section>
+
+				<section>
+					<h2>Floats & Width: The Shrink Wrap Effect</h2>
+					<h3>Updated CSS</h3>
+<pre><code>#sidebar {
+	float: left;
+	width: 300px;
+}
+
+#content {
+	float: left;
+	width: 800px;
+}</code></pre>
+					<h3>Updated HTML</h3>
+<pre><code>&lt;div id="sidebar"&gt;Div A has lots of content but now has a width&lt;/div&gt;
+&lt;div id="content"&gt;Div B&lt;/div&gt;</code></pre>
+					<h3>Example</h3>
+					<div style="float: left; width: 300px; border: 1px solid green;">Div A has lots of content but now has a width</div>
+					<div style="float: left; width: 800px; border: 1px solid blue;">Div B</div>
+				</section>
+
+				<section>
+					<h2>A Problem Arises</h2>
+					<p>What happens when we add our footer into the previous example?</p>
+					<h3>Updated HTML</h3>
+<pre><code>&lt;div id="sidebar"&gt;Sidebar has lots of content but now has a width&lt;/div&gt;
+&lt;div id="content"&gt;Content Div&lt;/div&gt;
+&lt;div id="footer"&gt;Footer Div&lt;/div&gt;</code></pre>
+					<h3>Example</h3>
+					<div style="float: left; width: 300px; border: 1px solid green;">Sidebar has lots of content but now has a width</div>
+					<div style="float: left; width: 800px; border: 1px solid blue;">Content</div>
+					<div style="border: 1px solid purple;">Footer</div>
+					<p style="clear: both;">As you can see, the footer is wrapping around the float. This is what we would expect, but its not what we want.</p>
+				</section>
+
+				<section>
+					<h2>The Solution: Clearing Floats</h2>
+					<p>Whenever we no longer want our HTML tags to wrap around our floated elements, we just use the <strong>clear</strong> CSS property to clear the float. Values for the clear property </p>
+					<ul>
+						<li><strong>left</strong> Clear elements that are floating on the left.<pre><code>clear: left</code></pre></li>
+						<li><strong>right</strong> Clear elements that are floating to the right. <pre><code>clear: right</code></pre></li>
+						<li><strong>none</strong> Remove clearing behavior from an element.<pre><code>clear: none</code></pre></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Clearing the Footer</h2>
+					<p>Lets add <strong>clear: left</strong> to our footer and see what happens</p>
+					<h3>Updated CSS</h3>
+<pre><code>#sidebar {
+	float: left;
+	width: 300px;
+}
+
+#content {
+	float: left;
+	width: 800px;
+}
+
+#footer {
+	clear: left;
+	width: 1100px;
+}</code></pre>
+				</section>
+				<section>
+					<h2>Clearing the Footer</h2>
+					<p>Problem solved! The <strong>clear: left</strong> property on the footer clears the floats from the sidebar and content div so the footer lays out the way we intend.</p>
+					<h3>Result</h3>
+					<div style="float: left; width: 300px; border: 1px solid green;">Sidebar has lots of content but now has a width</div>
+					<div style="float: left; width: 800px; border: 1px solid blue;">Content</div>
+					<div style="clear: left; width: 1100px; border: 1px solid purple;">Footer</div>
+				</section>
+				<section>
+					<h2>Float Order</h2>
+					<p>If we use <strong>float: right</strong> on our sidebar and content divs instead of float left, we can get the sidebar on the right side. We also need to change the footer to clear: right.</p>
+					<h3>Updated CSS</h3>
+<pre><code>#sidebar {
+	float: right;
+	width: 300px;
+}
+
+#content {
+	float: right;
+	width: 800px;
+}
+
+#footer {
+	clear: right;
+	width: 1100px;
+}</code></pre>
+				</section>
+				<section>
+					<h2>Float Order: Result</h2>
+					<p>Using <strong>float: right</strong> instead of left, the sidebar ends up on the right side instead of the left.</p>
+					<div style="float: right; width: 300px; border: 1px solid green;">Sidebar has lots of content but now has a width</div>
+					<div style="float: right; width: 800px; border: 1px solid blue;">Content</div>
+					<div style="clear: right; width: 1100px; float: right;border: 1px solid purple;">Footer</div>
+				</section>
+				<section>
+					<h2>Float: Summary</h2>
+					<p>Using a combination of the <strong>float</strong> and <strong>clear</strong> CSS properties, you can create multi-column layouts in HTML & CSS.</p>
+					<p>When you are using floats to create multi-column layouts, declare a width on your div tags to avoid the shrink wrap effect, where the width of the div is determine by the amount of content you put in it.</p>
+					<p>If you want a div to no longer float as one of the columns in your layout, use the <strong>clear</strong> property to stop the floating behavior. If you are using left floats you will declare <strong>clear: left</strong>. If you are using right floats you will use <strong>clear: right</strong>. You can also use <strong>clear: both</strong> to clear all floats.</p>
+					<p>Often times you want to be able to float images to the right or left in your content area. It is common to declare some re-usable classes in your CSS for this purposes. These classes usually include some margin to prevent the text that wraps around the image from butting up against it.</p>
+<pre><code>.image-right {
+	float: right;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+.image-left {
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}</code></pre>
+				</section>
+				<section>
+					<h2>Positioning</h2>
+					<p>CSS includes another set of properties for layout that are more suited for pixel specific placement of elements. Positioning is not generally used for creating column layouts. Instead it is most useful for when you need to position an HTML element at a very specific location. The logo and tagline within a masthead are good examples of commonly positioned elements.</p>
+					<p>Positioning is done through a combination of the css <strong>position</strong> property and the css properties <strong>top</strong>, <strong>bottom</strong>, <strong>left</strong> and <strong>right</strong></p>
+				</section>
+				<section>
+					<h2>CSS: Position Property</h2>
+					<p>The <strong>position</strong> property has 3 possible values:</p>
+					<ul>
+						<li>
+							<strong>absolute</strong> Position the element as a specific pixel or percentage location
+							<pre><code>position: absolute;</code></pre>
+						</li>
+						<li>
+							<strong>relative</strong> Move the element relative to its normal position.
+							<pre><code>position: relative;</code></pre>
+						</li>
+						<li>
+							<strong>static</strong> This is the default and is used for reseting other position values
+							<pre><code>position: static;</code></pre>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>position: absolute</h2>
+					<p>Absolute positioning is the most common of the three. In absolute positioning, we use a combination of the <strong>top</strong>, <strong>bottom</strong>, <strong>left</strong> and <strong>right</strong> properties to specify exactly where the element should be positioned. By default, elements are positioned relative to the body tag.</p>
+					<p>Place an element in the top left corner of the screen</p>
+<pre><code>position: absolute;
+top: 0;
+left: 0;</code></pre>
+					<p>Place an element in the bottom right corner of the screen</p>
+<pre><code>position: absolute;
+bottom: 0;
+right: 0;</code></pre>
+					<p>Place an element 50 pixels from the left edge of the screen and 100 pixels from the top</p>
+<pre><code>position: absolute;
+left: 50px;
+top: 100px;</code></pre>
+				</section>
+				<section>
+					<h2>position: absolute</h2>
+					<p>It is rare that we want to position an element relative to the body tag (which is the default). Consider the example of a masthead div with a logo in it. If I want the logo to be 50 pixels from the top of the masthead and 100 pixels from the top, how do I achieve this? Here is what happens when you just add absolute positioning to the logo div (the logo div is in blue, the masthead is red)</p>
+					<h3>CSS</h3>
+<pre><code>#logo {
+	position: absolute;
+	left: 50px;
+	top: 100px;
+}</code></pre>
+					<h3>HTML</h3>
+<pre><code>&lt;div id="masthead"&gt;
+	&lt;div id="logo"&gt;My Logo&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				</section>
+				<section style="border: 1px solid green;">
+					<h2>position: absolute</h2>
+					<p>Look for the "My Logo" text on this page. As you can see it is not inside of the red masthead div. It is being positioned based on the element it is inside of that has a position property set to either relative or absolute. In this case, the slide itself has a position of relative, so the logo div is placed 100 pixels from the top and 50 from the left.</p>
+					<h3>Result</h3>
+					<div style="border: 1px solid red;">
+						<div style="position: absolute; top: 100px; left: 50px; border: 1px solid blue;">My Logo</div>
+					</div>
+				</section>
+				<section>
+					<h2>position: relative</h2>
+					<p>Lets add <strong>position: relative</strong> to the masthead div and see how that changes the results.</p>
+					<h3>CSS</h3>
+<pre><code>#masthead {
+	position: relative;
+}
+
+#logo {
+	position: absolute;
+	left: 50px;
+	top: 100px;
+}</code></pre>
+					<h3>HTML</h3>
+<pre><code>&lt;div id="masthead"&gt;
+	&lt;div id="logo"&gt;My Logo&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				</section>
+				<section>
+					<h2>position: relative</h2>
+					<p>The "My Logo" div is now 100 pixels from the top of the masthead div and 50 pixels from the left. You probably noticed that the masthead div seems to have no height. This is because absolute positioned elements are removed from the normal flow of the document. In this example, we would want to add a height to the masthead to prop it open since its only element is absolutely positioned.</p>
+					<h3>Result</h3>
+					<div style="border: 1px solid red; position: relative;">
+						<div style="position: absolute; top: 100px; left: 50px; border: 1px solid blue;">My Logo</div>
+					</div>
+				</section>
+				<section>
+					<h2>position: relative</h2>
+					<p>Lets add a height to our masthead.</p>
+					<h3>CSS</h3>
+<pre><code>#masthead {
+	position: relative;
+	height: 200px;
+}
+
+#logo {
+	position: absolute;
+	left: 50px;
+	top: 100px;
+}</code></pre>
+					<h3>HTML</h3>
+<pre><code>&lt;div id="masthead"&gt;
+	&lt;div id="logo"&gt;My Logo&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				</section>
+				<section>
+					<h2>position: relative</h2>
+					<p>Now that the masthead has a height of 200 pixels declared, it will always be that tall, even if it has no children or its children are absolutely positioned. This is useful when you have a background image for your masthead you want to be completely visible regardless of what content you put into the masthead.</p>
+					<h3>Result</h3>
+					<div style="border: 1px solid red; position: relative; height: 200px;">
+						<div style="position: absolute; top: 100px; left: 50px; border: 1px solid blue;">My Logo</div>
+					</div>
+				</section>
+				<section>
+					<h2>position: relative</h2>
+					<p>Position relative can also be used to move elements based on where they would normally be placed. This is actually not a very common thing to need to do, lets look at why. Lets say we have 2 paragraphs and we position one of them relatively and set it to be 50 pixels from the top of where it normally would be.</p>
+
+					<h3>CSS</h3>
+<pre><code>#p1 {
+	position: relative;
+	top: 50px;
+}</code></pre>
+					<h3>HTML</h3>
+<pre><code>&lt;p id="p1"&gt;Paragraph 1&lt;/p&gt;
+&lt;p&gt;Paragraph 2&lt;/p&gt;</code></pre>
+				</section>
+				<section>
+					<h2>position: relative</h2>
+					<p>What a mess! The first paragraph is overlapping the second paragraph. Remember how we said that absolutely and relative positioned elements are removed from the normal flow of the page? This means they can overlap each other. This can be helpful sometimes, but it can also cause these types of collisions. This is one of the reasons floats are used for layouts rather than postioning.</p>
+					<h3>Result</h3>
+					<p style="position: relative; top: 50px;">Paragraph 1</p>
+					<p>Paragraph 2</p>
+				</section>
+				<section>
+					<h2>Positioning Summary</h2>
+					<p>Positioning is used much less commonly than floating and is not generally used for creating layouts. It is very useful, however, when you need to place an HTML element in a very specific pixel location. In this case, you should consider what you want to position it inside of and give that parent element a position of relative. We looked at the most common usage of setting a masthead to be position relative and then setting a logo inside of it to be absolutely positioned within it.</p>
+				</section>
+				
+			</div>
+
+
+			<!-- The navigational controls UI -->
+			<aside class="controls">
+				<a class="left" href="css-layout2.html#">&#x25C4;</a>
+				<a class="right" href="css-layout2.html#">&#x25BA;</a>
+				<a class="up" href="css-layout2.html#">&#x25B2;</a>
+				<a class="down" href="css-layout2.html#">&#x25BC;</a>
+			</aside>
+
+			<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
+			<div class="progress"><span></span></div>
+			
+		</div>
+		
+		<script src="js/reveal.js"></script>
+		<script src="lib/highlight.js"></script>
+		<script>
+			// Parse the query string into a key/value object
+			var query = {};
+			location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+				query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+			} );
+
+			Reveal.initialize({
+				// Display controls in the bottom right corner
+				controls: true,
+
+				// Display a presentation progress bar
+				progress: true,
+
+				// If true; each slide will be pushed to the browser history
+				history: true,
+
+				// Flags if mouse wheel navigation should be enabled
+				mouseWheel: true,
+
+				// Apply a 3D roll to links on hover
+				rollingLinks: true,
+
+				// UI style
+				theme: query.theme || 'default', // default/neon
+
+				// Transition style
+				transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
+			});
+
+			hljs.initHighlightingOnLoad();
+		</script>
+
+	</body>
+</html>

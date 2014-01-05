@@ -1,0 +1,60 @@
+body {
+	font-size: 12px;
+	line-height: 18px;
+	background-color: #666666;
+}
+
+.post {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #999999;
+}
+
+.post .title {
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: normal;
+	color: #666666;
+	margin-top: 0;
+	margin-bottom: 9px;
+}
+
+.post .date-author {
+	margin: 0;
+	color: #999999;
+	font-style: italic;
+}
+
+.post .teaser {
+	font-size: 13px;
+	margin: 0;
+}
+
+.post .read-more {
+	margin: 0;
+}
+
+.post .read-more a:link {
+	color: #000000;
+}
+
+.post .read-more a:visited {
+	color: #333333;
+}
+
+.post .read-more a:hover {
+	color: red;
+}
+
+.post .read-more a:active {
+	color: pink;
+}
+
+#container {
+	background-color: #FFFFFF;
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 36px;
+}

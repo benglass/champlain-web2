@@ -1,0 +1,136 @@
+/* Typography */
+
+body {
+    font-family: 'Sintony', sans-serif;
+    font-size: 16px;
+    line-height: 1.6em;
+    padding: 3em 5em;
+    background-color: #FFFBEA;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Libre Baskerville', serif;
+    line-height: 1.6em;
+    font-weight: bold;
+    margin: 1.6em 0 0.5em;
+    color: #0F3349;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 1.2em;
+    margin: 0;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+p, ul, ol {
+    margin-top: 0;
+    margin-bottom: 1.6em;
+}
+
+ul, ol {
+    margin-left: 0;
+    padding: 0;
+}
+
+a { text-decoration: none; }
+a:link, a:visited { color: #C34E3A; }
+a:hover, a:active { color: #C34E3A; text-decoration: underline; }
+
+section h2 {
+    border-bottom: 1px solid #BDCCD1;
+}
+
+section article {
+    margin-bottom: 2em;
+}
+
+.organization {
+    margin: 0;
+}
+
+.dates {
+    font-style: italic;
+}
+
+article p {
+    margin: 0;
+}
+
+/* Layout */
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4em;
+    max-width: 60em;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+/* Contact */
+
+.contact ul {
+    list-style: none;
+}
+
+/* Overview */
+
+.overview {
+    clear: both;
+}
+
+/* Skills */
+
+.skills ul {
+    list-style: none;
+}
+
+/* Employment */
+
+.employment .position {
+    font-weight: bold;
+    color: #8A9EA5;
+}
+
+/* Header/Contact Layout */
+
+h1 {
+    float: left;
+}
+
+.contact {
+    float: right;
+    text-align: right;
+}
+
+/* Date Positioning */
+
+article {
+    position: relative;
+}
+
+.dates {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* 
+
+Colors:
+
+Blue Dark: #0F3349
+Blue Medium: #8A9EA5
+Blue Light: #BDCCD1
+Orange: #C34E3A
+White: #FFFBEA
+
+*/

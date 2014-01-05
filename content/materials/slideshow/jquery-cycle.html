@@ -1,0 +1,160 @@
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>jQuery Cycle Tutorial</title>
+	<script type="text/javascript" src="../js/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-cycle/jquery.cycle.all.js"></script>
+<style type="text/css" media="all">
+
+body {
+	font: 12px/1.5em 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	background: rgb(100, 100, 100);
+	padding: 150px;
+}
+
+#slideshow {
+	position: relative;
+	width: 658px;
+	height: 329px;
+	margin: 0 auto;
+	-webkit-box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.25);
+}
+
+#slideshow a:link, #slideshow a:visited { color: #333; }
+#slideshow a:hover, #slideshow a:active { color: #999; }
+
+#slideshow li:first-child { display: block; }
+
+#slideshow li {
+	width: 658px;
+	height: 329px;
+	display: none;
+
+}
+
+#slideshow img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+
+#slideshow .content {
+	background: rgba(255, 255, 255, 0.7);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 20;
+	padding: 15px;
+	padding-right: 120px;
+	width: 523px;
+}
+
+#slideshow .content .btn-more {
+	font-weight: bold;
+	text-transform: uppercase;
+	background: rgba(0, 0, 200, 0.25);
+	color: #fff;
+	border-radius: 5px;
+	border: 2px solid transparent;
+	text-decoration: none;
+	font-size: 11px;
+	padding: 3px 6px;
+	position: absolute;
+	top: 40px;
+	right: 30px;
+}
+
+#slideshow .content .btn-more:hover {
+	border: 2px solid rgba(0, 0, 0, 0.25);
+}
+
+#slideshow .content h2 {
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 1.5em;
+	font-weight: bold;
+	margin: 0;
+}
+
+#slideshow .content p {
+	margin: 0;
+}
+
+#slideshow .pager {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	z-index: 30;
+}
+
+#slideshow .pager a {
+	line-height: 1em;
+	text-decoration: none;
+	float: left;
+	padding: 3px 6px;
+	font-weight: bold;
+	margin-right: 4px;
+	background: rgba(255, 255, 255, 0.25);
+	border-radius: 5px;
+	border: 0 solid transparent;
+}
+
+#slideshow .pager a:hover, #slideshow .pager a:active {
+	background: rgba(255, 255, 255, 1);
+	color: #000;
+}
+
+#slideshow .pager a:last-child {
+	margin: 0;
+}
+
+#slideshow .pager a.activeSlide {
+	background: rgba(0, 0, 200, 0.25);
+	color: #fff;
+}
+	
+</style>
+</head>
+<body>
+	<div id="slideshow">
+		<ul>
+			<li>
+				<div class="content">
+					<h2>Kate Boy</h2>
+					<p>Drawing inspiration from groundbreaking music by Peter Gabriel and Kate Bush, this Stockholm-based quartet makes strident electro-pop with a twist. <a href="#" class="btn-more">Read More</a></p>
+				</div>
+				<img src="images/8c869d46.jpg" width="658" height="329" alt="Kate Boy" />
+			</li>
+			<li>
+				<div class="content">
+					<h2>Devendra Banhart</h2>
+					<p>With his relatively subdued eighth album Mala, the 31-year-old, newly New York-based (and engaged) singer-songwriter is settling down in his own kind of way. <a href="#" class="btn-more">Read More</a></p>
+				</div>
+				<img src="images/858eac3b.jpg" width="658" height="329" alt="Devendra Banhart" />
+			</li>
+			<li>
+				<div class="content">
+					<h2>The Men</h2>
+					<p>The no-frills Brooklyn guitar rockers on the awesomeness of AC/DC, Satan-themed arcade games, John Wayne's corpse, and why the love water so much. <a href="#" class="btn-more">Read More</a></p>
+				</div>
+				<img src="images/e391d4a5.jpg" width="658" height="329" alt="The Men" />
+			</li>
+			<li>
+				<div class="content">
+					<h2>Jose Gonzalez / Junip</h2>
+					<p>The tranquil-voiced singer/songwriter talks to Ian Cohen about what to expect from his kraut-inspired band Junip's forthcoming self-titled sophomore album. <a href="#" class="btn-more">Read More</a></p>
+				</div>
+				<img src="images/8e3a15de.jpg" width="658" height="329" alt="Josa Gonzalez / Junip" />
+			</li>
+		</ul>
+		<div class="pager"></div>
+	</div>
+	<script type="text/javascript" charset="utf-8">
+		$('#slideshow ul').cycle({
+			pager: '.pager'
+		});
+	</script>
+</body>
+</html>

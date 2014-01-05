@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<title>Introduction to jQuery and Javascript</title>
+		<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+		<link href="js/highlight.js/styles/sunburst.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/highlight.js/highlight.pack.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
+		<style type="text/css" media="all">
+.employee {
+	background: #e5e5e5;
+	border: 1px solid #ccc;
+	padding: 15px;
+}
+
+.headshot {
+	float: right;
+}
+
+.well {
+	overflow: hidden;
+}
+
+.clear {
+	clear: both;
+}
+
+.row {
+	overflow: hidden;
+	padding: 15px;
+	border-bottom: 1px solid #ccc;
+}
+
+.row img {
+	float: left;
+	margin-right: 15px;
+}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Introduction to Javascript</h1>
+			<h2>What is Javascript</h2>
+			<blockquote>
+				<p>Javascript is a <strong>client-side</strong>[1] <strong>programming language</strong>[2] developed by Netscape to facilitate the addition of interactive components to web sites.</p>
+			</blockquote>
+			<ol>
+				<li><strong>Client-side:</strong> The "client" in question is web browser (Chrome, Firefox, IE, etc.), which is the software requesting the website from the server, which is where the website files actually live. This is why we can write javascript in an HTML file on our local computer and it will work when we open it in our browser, because the browser (or client) evaluates and executes the javascript.</li>
+				<li><strong>Programming Language</strong>: An artificial language for communicating instructions to a machine/computer (in this case, the browser).</li>
+			</ol>
+			<h2>Javascript with HTML/CSS</h2>
+			<ul>
+				<li>HTML is used for describing our content (this is a paragraph, this is an image, etc.)</li>
+				<li>CSS is used for styling the display of that content.</li>
+				<li>Javascript can add interactivity to the content and manipulate it by adding/remove HTML tags, changing content in addition to many other ways.</li>
+			</ul>
+			<p>As a programming language, Javascript is capable of responding to user input (the value of a text field called "first_name") or the environment (which browser is being used, what the width of the browser is) to cause the site behave differently. Javascript is a tool for attaching behavior to an otherwise static medium of HTML/CSS. Think of it as a layer sitting on top of an HTML/CSS website which provides interactivity such as popup windows, tabbed interfaces, slideshows, animation and more. If you are familiar with Flash/ActionScript, Javascript is like Actionscript for HTML/CSS, it allows you grab certain html elements and manipulate them in any way we like, changing dimensions, positioning, visibility, content and more.</p>
+			<p>Whenever you are going to write javascript in an HTML document, you need to ensure you put it inside of the special HTML tag &lt;script&gt;.</p>
+<pre><code>&lt;script type="text/javascript"&gt;
+// Javascript goes here, any line preceeded by two forward slashes (//) is a comment and is not actually executed as code
+&lt;/script&gt;</code></pre>
+			<p>Alternately, you can place it in a separate file with a .js extensiona and link it using the script tag and src attribute.</p>
+<pre><code>&lt;script type="text/javascript" src="something.js"&gt;&lt;/script&gt;</code></pre>
+			<h2>The Javascript Console</h2>
+			<p>In Chrome, and in the Firebug extension for Firefox, there is a <strong>Javascript Console</strong>, which allows you to type in javascript code and see the result immediately. Open Chrome and hit <strong>F12</strong> to open the Developer console. Click on the <strong>Console</strong> tab to view the console. Type the following into the console and hit Enter.</p>
+<pre><code>alert('hello world')</code></pre>
+			<h2>The Basics: Variables</h2>
+			<p>Programming languages are able to represent and manipulate information, for example they can add 2 numbers together or take sentence and break it apart into words by splitting up on every space. You can store information so you can refer to it later by using a variable by selecting a meaningful name, prefixing it with the 'var' keyword and assigning it a value.</p>
+			<div class="well">
+				<h3>Strings</h3>
+				<p>There are different types of variables in Javascript. The one we see below is an example of a <strong>string</strong> variable. A string contains text and must be surrounded by quotation marks (single or double). </p>
+<pre><code>&lt;script type="text/javascript"&gt;
+// Set the myName variable equal to the value of 'Homer Simpson'
+var myName = 'Homer Simpson'; 
+// Show the value of the myName variable in a popup in the browser
+alert(myName); 
+&lt;/script&gt;</code></pre>
+				<h3>Numbers</h3>
+				<p>There are also numeric types, such as an integer (a whole number, e.g. 5) or float (a decimal number, e.g. 3.1452334). These are not surrounded by quotes.</p>
+<pre><code>&lt;script type="text/javascript"&gt;
+// Set the myHourlyRate variable (its a float)
+var myHourlyRate = 15.75;
+// Set the hoursWorked variable (its an integer)
+var myHoursWorked = 8;
+&lt;/script&gt;</code></pre>
+				<p>Javascript can perform mathematical calculations on integers/floats, so if we want to know what my paycheck will be with that hourly rate and hours worked, we can multiple them together using the * symbol. Other symbols that can be used for operations are + (addition), - (subtraction) and / (division).
+<pre><code>&lt;script type="text/javascript"&gt;
+var myHourlyRate = 15.75;
+var myHoursWorked = 8;
+alert(myHourlyRate * myHoursWorked);
+&lt;/script&gt;</code></pre>
+				<h3>Boolean (True or False)</h3>
+				<p>There is a special type of value called a boolean which represents true or false, which are the possible values.</p>
+<pre><code>&lt;script type="text/javascript"&gt;
+var isMale = true;
+var isFemale = false;
+&lt;/script&gt;</code></pre>
+				<h3>Arrays (Lists of Values)</h3>
+				<p>A variable can also hold a list of multiple values, called an Array. The array below contains multiple strings. An individual value of an array can be accessed using the format array[number] where number is the number of the item in the list minus one (the first item is array[0]).</p>
+<pre><code>&lt;script type="text/javascript"&gt;
+var simpsons = [
+	'Homer',
+	'Marge',
+	'Bart',
+	'Lisa'
+	'Maggie'
+];
+alert(simpsons[0]);
+&lt;/script&gt;</code></pre>
+				<h3>Objects (Key/Value Pairs)</h3>
+				<p>Another type of variable in javascript in an <strong>object</strong>. An object is a selection of key/value pairs and is often used as a set of options. Individual values can be accessed in the format object.key or object[key].</p>
+<pre><code>&lt;script type="text/javascript"&gt;
+var simpsons = {
+	'dad': 'Homer',
+	'mom': 'Marge'
+};
+alert(simpsons.dad);
+&lt;/script&gt;</code></pre>
+				<h3>Functions</h3>
+				<p>The most complex of the types available in javascript is a function. A function is a piece of code that takes some kind of input variables and returns an output variable. For example, you might have a function called <strong>add</strong> which takes two input variables (x and y) and adds them together, returning the value. The 'alert' function we have been using takes the value of the input you pass in (called an argument) and displays it in a pop up windows.</p>
+<pre><code>&lt;script type="text/javascript"&gt;
+var add = function(x, y) {
+	return x + y;
+};
+alert(add(5, 2));
+&lt;/script&gt;</code></pre>
+			</div>
+			<h2>Logic: The if/else statement.</h2>
+			<p>We can make our javascript behave differently depending on the values we provied using the if/else statement. We can compare values using some of the comparison symbols (===, >, >=, <, <=) We can also send values to the console so we can see them instead of alerting them by calling the function console.log and passing in the value.</p>
+<pre><code>&lt;script type="text/javascript"&gt;
+var isFive = function(a) {
+	if (a === 5) {
+		return 'a is 5';
+	} else if (a > 5) {
+		return 'a is more than 5';
+	} else {
+		return 'a is less than 5';
+	}
+};
+console.log(isFive(5));
+console.log(isFive(6));
+console.log(isFive(4));
+&lt;/script&gt;</code></pre>
+			<h2>Introduction to jQuery</h2>
+			<p>jQuery is a library (or collection of utility functions) for javascript that makes it easier to manipulate HTML websites. The first step to using jQuery is to download it from <a href="http://www.jquery.com">http://www.jquery.com</a> and to add a link to it in the head of your document using the script tag and src attribute. I would recommend you place it in a js folder for your javascript files.</p>
+<pre><code>&lt;script type="text/javascript" src="js/jquery.js"&gt;&lt;/script&gt;</code></pre>
+			<p>jQuery often uses CSS selectors in order to grab certain HTML tags (just like we do in CSS for applying styles) and then does something to them. This is achieved using the jQuery function, to which you pass a css selector. To grab all paragraphs on the page and store them in a variable called p, we would use the following code.</p>
+<pre><code>&lt;script type="text/javascript"&gt;
+var p = jQuery('p');
+console.log(p);
+&lt;/script&gt;</code></pre>
+			<p>Obviously just selecting the paragraph tags in and of itself is not very exciting, but logging the result can help tell you whether your CSS selector is returning any HTML elements or not. Lets say we want to hide all of the paragraphs we grabbed, we can use jQuery's build in function hide().</p>
+<pre><code>&lt;script type="text/javascript"&gt;
+var p = jQuery('p');
+p.hide();
+&lt;/script&gt;</code></pre>
+			<p>In jQuery, we can chain together multiple functions, so if we wanted to add a class to all of the paragraphs before hiding them, it might look like this.</p>
+<pre><code>&lt;script type="text/javascript"&gt;
+var p = jQuery('p');
+p.addClass('myClass').hide();
+&lt;/script&gt;</code></pre>
+			<h2>$ === jQuery</h2>
+			<p>In order to make jQuery code even easier to write, by default the $ symboly is the same as writing jQuery. Therefore any of the above examples could be written using $ in place of jQuery. You will commonly see this in example plugins.</p>
+<pre><code>&lt;script type="text/javascript"&gt;
+var p = $('p');
+p.addClass('myClass').hide();
+&lt;/script&gt;</code></pre>
+			<h2>jQuery Plugins</h2>
+			<p>jQuery is a very popular Javascript library and many people have released extensions for it that provide functionality for tabs, accordions, slideshows and lightboxes. These extensions are called plugins, and generally a google search for 'slideshow jquery plugin' will yield many results. Just like the jquery library itself, the first step to using a plugin is to download it and to link any javascript/css files requried to your HTML page. Generally plugins come with a README file or have a section on the website for installation that tells you what you need to include for the plugin to work. Most jQuery plugins work by extending the functions available once you grab some HTML elements using $('p'). For example, you may find an accordion plugin called fancyAccordion that allows you to call $('p').fancyAccordion() just as we called $('p').hide() above.</p>
+			<h3>jQuery Lightbox Plugin: FancyBox</h3>
+			<p>The <a href="http://fancyapps.com/fancybox/">FancyBox</a> plugin is a popular jQuery plugin for creating lightbox effects. To begin, download the zip file from the website and place the contents in a <strong>js</strong> folder. Change the folder name to fancybox. Open the README.md file and go to the How to Use section.</p>
+	</body>
+</html>
