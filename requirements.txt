@@ -12,4 +12,5 @@ pelican==3.3
 pycrypto==2.6.1
 pytz==2013.9
 six==1.4.1
+webassets==0.9
 wsgiref==0.1.2

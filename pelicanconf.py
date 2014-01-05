@@ -27,6 +27,8 @@ THEME = 'themes/champlain'
 
 STATIC_PATHS = ['images', 'materials']
 
+WEBASSETS = True
+
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
