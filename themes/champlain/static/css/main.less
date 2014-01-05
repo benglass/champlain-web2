@@ -1,0 +1,175 @@
+/*
+	Name: Champlain College
+	Date: January 2014
+	Description: Champlain College Course Site Layout
+	Version: 1.0
+	License: MIT <http://opensource.org/licenses/MIT>
+	Licensed by: Ben Glassman <http://benglassman.com/>
+	Original author: Ben Glassman <http://benglassman.com/>
+*/
+
+@import url("reset.css");
+@import url("pygment.css");
+
+@maroon: maroon;
+@mainFontFamily: 'Times New Roman', Helvetica, Arial, sans-serif;
+
+body {
+	font: 62.5%/1.8em @mainFontFamily;
+    color: green;
+	margin: 8em 6em;
+}
+
+a:link, a:visited { color: #000; }
+a:hover, a:active { color: red; }
+
+h1 {
+	font-size: 2.4em;
+	margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #000;
+}
+
+h2 {
+	font-size: 1.8em;
+	border-bottom: 1px solid #000;
+	text-indent: 10em;
+	margin-top: 2em;
+	margin-bottom: 0.4444em;
+	padding-bottom: 0.5em;
+}
+
+h3 {
+	font-size: 1.5em;
+	font-weight: bold;
+    color: @maroon;
+}
+
+h4 {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+p {
+	font-size: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+ul, ol, dl { margin-bottom: 1.8em; }
+ul, ol { list-style: disc; }
+li { font-size: 1.5em; line-height: 1.5em; }
+
+pre {
+    font-size: 1.6em;
+    margin-bottom: 1.5em;
+}
+
+table { margin-bottom: 1.8em; }
+td {
+	font-size: 1.5em;
+	vertical-align: top;
+	padding: 0.75em 1.5em 0.75em 0;
+	border-bottom: 1px solid #333;
+}
+
+th {
+	font-size: 1.5em;
+	text-align: left;
+	vertical-align: top;
+	padding: 0 1.5em 0.75em 0;
+	border-bottom: 1px solid #333;
+}
+tbody th { padding: 0.75em 1.5em 0.75em 0; }
+
+div.section {
+	position: relative;
+	padding-left: 18em;
+}
+
+div.section h3 {
+	text-align: right;
+	width: 10em;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.masthead {
+    margin-bottom: 2em;
+}
+
+.site-title {
+	font-size: 2.2em;
+	border-bottom: 1px solid #000;
+    font-weight: bold;
+	margin-top: 2em;
+	margin-bottom: 0.4444em;
+	padding-bottom: 0.5em;
+}
+
+.site-title a { color: maroon; text-decoration: none; }
+.site-info {
+    color: #333;
+    border-top: 1px solid #000;
+    padding-top: 2em;
+    margin-top: 4em;
+}
+
+.course-info {
+    overflow: hidden;
+}
+
+.course-info .course-details {
+	list-style: none;
+    float: left;
+    width: 25em;
+    margin-right: 1em;
+}
+
+.course-info .course-details li { font-size: 1.4em; }
+.course-info .course-details > :first-child {
+    font-weight: bold;
+}
+
+.nav-primary {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.nav-primary ul { list-style: none; margin: 0; }
+.nav-primary li { font-size: 1.4em; font-weight: bold; float: left; }
+.nav-primary a { text-decoration: none; float: left; padding: 0.75em 1em; border-right: 1px solid #fff; }
+.nav-primary a:link, .nav-primary a:visited {
+    background-color: #000;
+    color: #fff;
+}
+.nav-primary a:hover, .nav-primary a:active {
+    background-color: red;
+    color: #fff;
+}
+.nav-primary .current a {
+    background-color: maroon;
+}
+
+#calendar h3 {
+	font-size: 1em;
+	text-align: left;
+	width: auto;
+	font-weight: bold;
+	position: static;
+	margin: 0 0 1em;
+}
+
+#calendar h4 {
+	font-size: 1em;
+	color: #666;
+	font-weight: bold;
+}
+
+#calendar ul { margin: 0 0 1em; }
+#calendar li { font-size: 1em; list-style: none; }
+
+#calendar .incomplete { color: red; }
