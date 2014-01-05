@@ -48,6 +48,7 @@ Learning & Reference
 * `Code Academy <http://www.codecademy.com/>`_: Free Online Courses 
 * `Try jQuery <http://try.jquery.com/>`_: Free Online Course 
 * `HTMLDog <http://htmldog.com>`_: Free Online HTML/CSS Reference 
+* `A List Apart Floats 101 <http://www.alistapart.com/articles/css-floats-101/>`_: Explanation of CSS floats
 
 .. class:: super-section
 
@@ -63,6 +64,7 @@ Tools & Resources
 * `Twitter Bootstrap <http://getbootstrap.com/>`_: Front-end framework with grids, forms, typography and ui
 * `LESS <http://lesscss.org/>`_: CSS Pre-Processor adds features like variables and selector nesting to CSS
 * `jQuery UI <http://jqueryui.com>`_: User Interface library for jQuery providing UI elements like tabs, dialogs, etc.
+* `Sons of Suckerfish Dropdowns <http://www.htmldog.com/articles/suckerfish/dropdowns/>`_: Tutorial and examples of how to create a dropdown menu with CSS.
 
 .. class:: super-section
 
