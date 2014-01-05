@@ -36,4 +36,3 @@ COURSE_LOCATION = 'Ireland 012'
 COURSE_TIMES = 'Monday 5:30 - 8:15 PM'
 INSTRUCTOR_NAME = 'Ben Glassman'
 INSTRUCTOR_EMAIL = 'bglassmancc@gmail.com'
-
