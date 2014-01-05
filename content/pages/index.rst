@@ -5,18 +5,4 @@
 :save_as: index.html
 :label: Home
 
-This is some content. Its great. No really.
-
-.. code-block:: css
-
-    .style {
-        font-weight: bold;
-    }
-
-.. code-block:: html
-
-    <p>This is some html</p>
-
-.. raw:: html
-
-    <p style="color: red;">Foo!!</p>
+Welcome to the course website for Web II (GDD 306).

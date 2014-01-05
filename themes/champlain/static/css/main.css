@@ -8,12 +8,8 @@
 	Original author: Ben Glassman <http://benglassman.com/>
 */
 
+@import url("reset.css");
 @import url("pygment.css");
-
-* {
-	margin: 0;
-	padding: 0;
-}
 
 body {
 	font: 62.5%/1.8em 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -40,7 +36,7 @@ h2 {
 }
 
 h3 {
-	font-size: 1.2em;
+	font-size: 1.5em;
 	font-weight: normal;
 }
 
@@ -50,12 +46,13 @@ h4 {
 }
 
 p {
-	font-size: 1.2em;
+	font-size: 1.5em;
 	margin-bottom: 1.5em;
 }
 
 ul, ol, dl { margin-bottom: 1.8em; }
-li { font-size: 1.2em; }
+ul, ol { list-style: disc; }
+li { font-size: 1.5em; line-height: 1.5em; }
 
 pre {
     font-size: 1.6em;
@@ -64,14 +61,14 @@ pre {
 
 table { margin-bottom: 1.8em; }
 td {
-	font-size: 1.2em;
+	font-size: 1.5em;
 	vertical-align: top;
 	padding: 0.75em 1.5em 0.75em 0;
 	border-bottom: 1px solid #333;
 }
 
 th {
-	font-size: 1.2em;
+	font-size: 1.5em;
 	text-align: left;
 	vertical-align: top;
 	padding: 0 1.5em 0.75em 0;
@@ -86,7 +83,7 @@ div.section {
 
 div.section h3 {
 	text-align: right;
-	width: 13em;
+	width: 10em;
 	position: absolute;
 	top: 0;
 	left: 0;
