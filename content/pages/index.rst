@@ -16,3 +16,7 @@ This is some content. Its great.
 .. code-block:: html
 
     <p>This is some html</p>
+
+.. raw:: html
+
+    <p style="color: red;">Foo!!</p>
