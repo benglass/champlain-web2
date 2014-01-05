@@ -6,7 +6,6 @@ Course Resources
 :author: Ben Glassman
 
 * `CSS: Intro & Typography: Slideshow <css-materials/css-intro.html>`_
-
 * `Lab: Resume <labs/resume>`_
 * `CSS: Intro to Floats <intro-to-floats.html>`_
 * `CSS: Clearing and Containing Floats <clearing-containing-floats.html>`_
