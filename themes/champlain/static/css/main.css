@@ -57,6 +57,11 @@ p {
 ul, ol, dl { margin-bottom: 1.8em; }
 li { font-size: 1.2em; }
 
+pre {
+    font-size: 1.6em;
+    margin-bottom: 1.5em;
+}
+
 table { margin-bottom: 1.8em; }
 td {
 	font-size: 1.2em;
