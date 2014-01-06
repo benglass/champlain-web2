@@ -12,7 +12,7 @@ Labs
 
 * `Lab: Resume <../materials/labs/resume>`_
 * `jQuery: Cycle Lab <../materials/slideshow/jquery-cycle.html>`_
-* `CSS: Framework Lab <../materials/framework-lab/download.tar.gz>`_
+* `CSS: Framework Lab <../materials/framework-lab/layout.html>`_
 * `CSS3 Lab <../materials/css3.html>`_
 * `CSS: Intro to Floats <../materials/intro-to-floats.html>`_
 * `CSS: Clearing and Containing Floats <../materials/clearing-containing-floats.html>`_
