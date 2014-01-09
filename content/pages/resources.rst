@@ -10,7 +10,8 @@ Course Resources
 Labs
 ----
 
-* `Lab: Resume <../materials/labs/resume>`_
+* `Lab: Resume (Content) <../materials/labs/resume/content.txt>`_
+* `Lab: Resume (Example HTML/CSS) <../materials/labs/resume>`_
 * `jQuery: Cycle Lab <../materials/slideshow/jquery-cycle.html>`_
 * `CSS: Framework Lab <../materials/framework-lab/layout.html>`_
 * `CSS3 Lab <../materials/css3.html>`_
