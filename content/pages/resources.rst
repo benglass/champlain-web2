@@ -45,11 +45,15 @@ Assignments
 Learning & Reference
 --------------------
 
-* `TutsPlus Learn CSS <http://learncss.tutsplus.com/>`_: Free Online CSS course 
-* `Code Academy <http://www.codecademy.com/>`_: Free Online Courses 
-* `Try jQuery <http://try.jquery.com/>`_: Free Online Course 
-* `HTMLDog <http://htmldog.com>`_: Free Online HTML/CSS Reference 
+Free resources and courses for online learning.
+
+* `TutsPlus Learn CSS <http://learncss.tutsplus.com/>`_: CSS course 
+* `Code Academy <http://www.codecademy.com/>`_: Web Development Courses
+* `Try jQuery <http://try.jquery.com/>`_: Introduction to jQuery Course
+* `HTMLDog <http://htmldog.com>`_: HTML/CSS Reference 
 * `A List Apart Floats 101 <http://www.alistapart.com/articles/css-floats-101/>`_: Explanation of CSS floats
+* `Discover DevTools <https://www.codeschool.com/courses/discover-devtools>`_: Chrome Developer Tools Course
+* `Javascript Roadtrip <https://www.codeschool.com/courses/javascript-road-trip-part-1>`_: Introduction to Javascript Course
 
 .. class:: super-section
 
