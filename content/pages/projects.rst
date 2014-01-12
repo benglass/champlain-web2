@@ -61,9 +61,11 @@ HTML
 - Skills will be marked up using an unordered list
 - Use the <link> tag to link your external stylesheet.
 - Proper use of heading tags (A single h1 with student name, h2 for each section heading, h3 for each job/school)
+- Email address in contact information should be linked using an <a> tag.
 
 CSS
 ```
+- Font family for body should be declared on the body tag
 - Typographic Styles for paragraphs
 - Typographic Styles 3 levels of headings (h1, h2, h3)
 - Typographic Styles for links (unvisited, visited, hover, active)
