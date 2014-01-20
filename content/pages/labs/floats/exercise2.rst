@@ -7,6 +7,9 @@ CSS Floats Exercise 2: Column Layouts with CSS Floats
 :hidden: 1
 
 A common styling problem we can solve with css floats is that of multi-column layouts.
+This exercise will show you how to create `this 3 column layout <http://codepen.io/benglass/pen/djnte>`_
+use floats.
+
 By default html tags like div, p, h1-h6, section and article will be rendering in a stacked vertical
 layout. For example, consider the following html for a list of products:
 
