@@ -190,3 +190,14 @@ div.section h3 {
 #calendar li { font-size: 1em; list-style: none; }
 
 #calendar .incomplete { color: red; }
+
+.code-example {
+    border: 5px solid #ccc;
+    padding: 50px;
+    overflow: hidden;
+    margin-bottom: 2em;
+}
+
+.code-example-sm {
+    width: 500px;
+}

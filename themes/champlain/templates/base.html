@@ -24,7 +24,9 @@
             {% endfor %}
             {% if DISPLAY_PAGES_ON_MENU -%}
             {% for pg in PAGES %}
+                {% if not pg.hidden | default(false) %}
                 <li{% if pg == page %} class="current"{% endif %}><a href="{{ SITEURL }}/{{ pg.url }}">{{ pg.label|default(pg.title) }}</a></li>
+                {% endif %}
             {% endfor %}
             {% endif %}
             {% if DISPLAY_CATEGORIES_ON_MENU -%}
@@ -90,5 +92,8 @@
 {% include 'analytics.html' %}
 {% include 'piwik.html' %}
 {% include 'disqus_script.html' %}
+
+<script async src="//codepen.io/assets/embed/ei.js"></script>
+
 </body>
 </html>

@@ -11,6 +11,7 @@ Labs
 ----
 
 * Lab: Resume (Content: [`Text <../materials/labs/resume/content.txt>`_] [`HTML <../materials/labs/resume/content.html>`_]) 
+* Lab: Floats (`Exercise 1 <{filename}labs/floats/exercise1.rst>`_, `Exercise 2 <{filename}labs/floats/exercise2.rst>`_) 
 * `Lab: Resume (Example HTML/CSS) <../materials/labs/resume>`_
 * `jQuery: Cycle Lab <../materials/slideshow/jquery-cycle.html>`_
 * `CSS: Framework Lab <../materials/framework-lab/layout.html>`_
@@ -70,6 +71,7 @@ Tools & Resources
 * `LESS <http://lesscss.org/>`_: CSS Pre-Processor adds features like variables and selector nesting to CSS
 * `jQuery UI <http://jqueryui.com>`_: User Interface library for jQuery providing UI elements like tabs, dialogs, etc.
 * `Sons of Suckerfish Dropdowns <http://www.htmldog.com/articles/suckerfish/dropdowns/>`_: Tutorial and examples of how to create a dropdown menu with CSS.
+* `Fillerama <http://chrisvalleskey.com/fillerama/>`_: Website for generating filler html content (lorem ipsum)
 
 .. class:: super-section
 
