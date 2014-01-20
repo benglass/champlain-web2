@@ -29,7 +29,6 @@ h1 {
 h2 {
 	font-size: 1.8em;
 	border-bottom: 1px solid #000;
-	text-indent: 10em;
 	margin-top: 2em;
 	margin-bottom: 0.4444em;
 	padding-bottom: 0.5em;
@@ -80,12 +79,12 @@ th {
 }
 tbody th { padding: 0.75em 1.5em 0.75em 0; }
 
-div.section {
+div.subsection {
 	position: relative;
 	padding-left: 18em;
 }
 
-div.section .section .section {
+div.subsection .subsection .subsection {
 	position: relative;
     padding: 0;
 }
@@ -100,7 +99,7 @@ div.super-section h2 {
     text-indent: 0;
 }
 
-div.section h3 {
+div.subsection h3 {
 	font-size: 1.5em;
 	font-weight: bold;
     color: maroon;

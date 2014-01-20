@@ -5,8 +5,6 @@ Course Resources
 :tags: resources
 :author: Ben Glassman
 
-.. class:: super-section
-
 Labs
 ----
 
@@ -24,24 +22,16 @@ Labs
 * `Responsive Design <../materials/responsive-tutorial>`_
 * `Media Queries <../materials/media-queries.html>`_
 
-.. class:: super-section
-
 Slideshows
 ----------
 
 * `CSS: Intro & Typography: Slideshow <../materials/css/css-intro.html>`_
 * `CSS Layout 2: Slideshow <../materials/css/css-layout2.html>`_
 
-.. class:: super-section
-
 Assignments
 -----------
 
-.. class:: super-section
-
 * `CSS Layout 2: Assignment <../materials/css/css-layout2-assignment.html>`_
-
-.. class:: super-section
 
 Learning & Reference
 --------------------
@@ -55,8 +45,6 @@ Free resources and courses for online learning.
 * `A List Apart Floats 101 <http://www.alistapart.com/articles/css-floats-101/>`_: Explanation of CSS floats
 * `Discover DevTools <https://www.codeschool.com/courses/discover-devtools>`_: Chrome Developer Tools Course
 * `Javascript Roadtrip <https://www.codeschool.com/courses/javascript-road-trip-part-1>`_: Introduction to Javascript Course
-
-.. class:: super-section
 
 Tools & Resources
 -----------------
@@ -72,8 +60,6 @@ Tools & Resources
 * `jQuery UI <http://jqueryui.com>`_: User Interface library for jQuery providing UI elements like tabs, dialogs, etc.
 * `Sons of Suckerfish Dropdowns <http://www.htmldog.com/articles/suckerfish/dropdowns/>`_: Tutorial and examples of how to create a dropdown menu with CSS.
 * `Fillerama <http://chrisvalleskey.com/fillerama/>`_: Website for generating filler html content (lorem ipsum)
-
-.. class:: super-section
 
 Software
 --------

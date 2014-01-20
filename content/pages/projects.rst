@@ -8,8 +8,6 @@ Mini Projects
 There are 4 mini projects that comprise the first half of the semester.
 The requirements for each one are described below.
 
-.. class:: super-section
-
 -----------------
 Project 1: Resume
 -----------------
@@ -71,8 +69,6 @@ CSS
 - Typographic Styles for links (unvisited, visited, hover, active)
 - Typographic Styles for unordered lists
 
-.. class:: super-section
-
 ------------------------
 Project 2: Photo Gallery
 ------------------------
@@ -118,8 +114,6 @@ Javascript/jQuery
 - jQuery attached to the page using a <script> tag
 - Use of javascript such as a `jQuery Lightbox plugin <http://fancyapps.com/fancybox/>`_ for display
   of the full size image without leaving the page.
-
-.. class:: super-section
 
 ----------------------
 Project 3: Site Layout
@@ -179,8 +173,6 @@ CSS
 - Clear for clearing footer
 - CSS for dropdown navigation using `Sons of Suckerfish technique <http://www.htmldog.com/articles/suckerfish/dropdowns/>`_
 - Basic typographic styles for 3 levels of headings, paragraphs and links (can be taken from resume)
-
-.. class:: super-section
 
 ------------------------
 Project 4: jQuery Plugin
