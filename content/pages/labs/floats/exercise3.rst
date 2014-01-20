@@ -90,7 +90,7 @@ Follow the instructions below to create a list of staff bios with headshots.
 
 .. raw:: html
 
-    <p data-height="593" data-theme-id="0" data-slug-hash="Fngwz" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/benglass/pen/Fngwz'>Fngwz</a> by Ben Glassman (<a href='http://codepen.io/benglass'>@benglass</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+    <p data-height="601" data-theme-id="0" data-slug-hash="HCGit" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/benglass/pen/HCGit'>HCGit</a> by Ben Glassman (<a href='http://codepen.io/benglass'>@benglass</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 
 10. Using the css property **clear** we can tell the browser to stop wrapping content around any previous floats.
     For each **bio**, we don't want it to wrap around any previous floats from the other bios so we tell each **bio**
@@ -155,3 +155,9 @@ Follow the instructions below to create a list of staff bios with headshots.
         margin-right: 15px;
         margin-bottom: 15px;
     }
+
+16. We now have the final result (shown below).
+
+.. raw:: html
+
+    <p data-height="709" data-theme-id="0" data-slug-hash="Fngwz" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/benglass/pen/Fngwz'>Fngwz</a> by Ben Glassman (<a href='http://codepen.io/benglass'>@benglass</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
