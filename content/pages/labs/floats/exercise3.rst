@@ -22,12 +22,12 @@ Follow the instructions below to create a list of staff bios with headshots.
         </section>
     </body>
 
-3. Add an **article** tag with a class of **staff** to the **section** tag
+3. Add an **article** tag with a class of **bio to the **section** tag
 
 .. code-block:: html
 
     <section class="staff-list">
-        <article class="staff">
+        <article class="bio">
         </article>
     </section>
 
@@ -39,7 +39,7 @@ Follow the instructions below to create a list of staff bios with headshots.
 .. code-block:: html
 
     <section class="staff-list">
-        <article class="staff">
+        <article class="bio">
             <div class="headshot">
                 <img src="http://www.placecage.com/c/140/200" alt="Nicholas Cage" />
             </div>
@@ -51,7 +51,7 @@ Follow the instructions below to create a list of staff bios with headshots.
 .. code-block:: html
 
     <section class="staff-list">
-        <article class="staff">
+        <article class="bio">
             <div class="headshot">
                 <img src="http://www.placecage.com/c/140/200" alt="Nicholas Cage" />
             </div>
@@ -65,7 +65,7 @@ Follow the instructions below to create a list of staff bios with headshots.
 .. code-block:: html
 
     <section class="staff-list">
-        <article class="staff">
+        <article class="bio">
             <div class="headshot">
                 <img src="http://www.placecage.com/c/140/200" alt="Nicholas Cage" />
             </div>
