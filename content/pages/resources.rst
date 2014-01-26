@@ -11,7 +11,7 @@ Labs
 * **Lab:** Resume (Content: [`Text <../materials/labs/resume/content.txt>`_] [`HTML <../materials/labs/resume/content.html>`_]) 
 * **Lab:** `Resume (Example HTML/CSS) <../materials/labs/resume>`_
 * **Lab:** Floats (`Exercise 1 <{filename}labs/floats/exercise1.rst>`_, `Exercise 2 <{filename}labs/floats/exercise2.rst>`_, `Exercise 3 <{filename}labs/floats/exercise3.rst>`_) 
-* **Lab:** Layout (`Exercise 1 <{filename}labs/layout/exercise1.rst>`__) 
+* **Lab:** Layout (`Exercise 1 <{filename}labs/layout/exercise1.rst>`__, `Exercise 2 <{filename}labs/layout/exercise2.rst>`__) 
 * `jQuery: Cycle Lab <../materials/slideshow/jquery-cycle.html>`_
 * `CSS: Framework Lab <../materials/framework-lab/layout.html>`_
 * `CSS3 Lab <../materials/css3.html>`_
