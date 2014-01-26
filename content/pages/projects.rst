@@ -69,8 +69,69 @@ CSS
 - Typographic Styles for links (unvisited, visited, hover, active)
 - Typographic Styles for unordered lists
 
+----------------------
+Project 2: Site Layout
+----------------------
+
+Students will design a basic website layout in the form of a wireframe (content design, color, typography 
+and imagery are not required) and produce it using HTML/CSS. This project is designed to familiarize students
+with CSS layout properties such as floating/clearing and positioning. 
+
+Elements
+--------
+
+The following elements/sections are required in the layout:
+
+- Masthead
+  + Logo
+  + Tagline
+- Primary Navigation
+  + Secondary Navigation as Dropdown Menu
+- Primary Content Area
+  + Level 1 heading 
+  + At least 1 paragraph of dummy content
+  + At least 1 link
+  + At least one floated image
+- Secondary Content Area/Sidebar
+- Footer
+  + Paragraph with copyright symbol
+  + Paragraph with text only navigation
+
+Design
+------
+
+Students will create their design using Illustrator or Photoshop and submit the design as a PDF. The design should 
+show how the second level navigation dropdown will appear. The layout must be a multi-column layout and it must be centered within the browser.
+
+Production
+----------
+
+The HTML and CSS should demonstrate the following techniques:
+
+HTML
+````
+- Container div with id attribute wrapped around entire site
+- Masthead using the <header> tag with an id attribute
+  + Logo in a div tag with an id attribute
+  + Tagline in a paragraph tag with an id attribute
+- Navigation in a <nav> tag with an id attribute
+  + Primary/Secondary navigation as list items in a nested unordered list
+- Primary and Secondary Content Areas as sections with ids
+- Footer as <footer> tag with an id attribute
+- <link> tag linking to external stylesheet
+
+CSS
+```
+- Use of width and auto margins on container for centering layout
+- Use of id selectors for styling layout elements
+- Absolute positioning for placement of logo/tagline
+- Floats for multi-column layout of primary/secondary content columns
+- Clear for clearing footer
+- CSS for dropdown navigation using `Sons of Suckerfish technique <http://www.htmldog.com/articles/suckerfish/dropdowns/>`_
+- Basic typographic styles for 3 levels of headings, paragraphs and links (can be taken from resume)
+
 ------------------------
-Project 2: Photo Gallery
+Project 3: Photo Gallery
 ------------------------
 
 Students will design and build a photo gallery using HTML and CSS.
@@ -114,65 +175,6 @@ Javascript/jQuery
 - jQuery attached to the page using a <script> tag
 - Use of javascript such as a `jQuery Lightbox plugin <http://fancyapps.com/fancybox/>`_ for display
   of the full size image without leaving the page.
-
-----------------------
-Project 3: Site Layout
-----------------------
-
-Students will design a basic website layout in the form of a wireframe (content design, color, typography 
-and imagery are not required) and produce it using HTML/CSS. This project is designed to familiarize students
-with CSS layout properties such as floating/clearing and positioning. 
-
-Elements
---------
-
-The following elements/sections are required in the layout:
-
-- Masthead
-  + Logo
-  + Tagline
-- Primary Navigation
-  + Secondary Navigation as Dropdown Menu
-- Primary Content Area
-  + Level 1 heading 
-  + At least 1 paragraph of dummy content
-  + At least 1 link
-- Secondary Content Area/Sidebar
-- Footer
-  + Paragraph with copyright symbol
-
-Design
-------
-
-Students will create their design using Illustrator or Photoshop and submit the design as a PDF. The design should 
-show how the second level navigation dropdown will appear. The layout must be a multi-column layout and it must be centered within the browser.
-
-Production
-----------
-
-The HTML and CSS should demonstrate the following techniques:
-
-HTML
-````
-- Container div with id attribute wrapped around entire site
-- Masthead using the <header> tag with an id attribute
-  + Logo in a div tag with an id attribute
-  + Tagline in a paragraph tag with an id attribute
-- Navigation in a <nav> tag with an id attribute
-  + Primary/Secondary navigation as list items in a nested unordered list
-- Primary and Secondary Content Areas as sections with ids
-- Footer as <footer> tag with an id attribute
-- <link> tag linking to external stylesheet
-
-CSS
-```
-- Use of width and auto margins on container for centering layout
-- Use of id selectors for styling layout elements
-- Absolute positioning for placement of logo/tagline
-- Floats for multi-column layout of primary/secondary content columns
-- Clear for clearing footer
-- CSS for dropdown navigation using `Sons of Suckerfish technique <http://www.htmldog.com/articles/suckerfish/dropdowns/>`_
-- Basic typographic styles for 3 levels of headings, paragraphs and links (can be taken from resume)
 
 ------------------------
 Project 4: jQuery Plugin
