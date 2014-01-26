@@ -37,7 +37,8 @@ Instructions
     }
 
 5. To center the website, we will add a **width** to the **container** and set the **left and right margins** to a
-   special value **auto** which will evenly distribute available space between them.
+   special value **auto** which will evenly distribute available space between them. Set the **background color** to
+   white (#ffffff)
 
 .. code-block:: css
 
@@ -45,6 +46,7 @@ Instructions
         width: 960px;
         margin-left: auto;
         margin-right: auto;
+        background-color: #ffffff;
     }
 
 6. Set the **background color** for the **masthead** to **#333333** (dark gray)
