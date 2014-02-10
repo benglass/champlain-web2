@@ -138,7 +138,9 @@ Students will design and build a photo gallery using HTML and CSS.
 The photo gallery will include a display of thumbnail images that are clickable 
 in order to view a larger size image with an associated title and description.
 This project focuses on basic layout and must use either floats or absolute positioning
-in CSS to lay out the thumbnails. Students will use javascript (such as a `jQuery Lightbox plugin <http://fancyapps.com/fancybox/>`_) in order to display the full size images with causing a reload of the page.
+in CSS to lay out the thumbnails. Students will use a jQuery Plugin of their choosing
+(such as a `jQuery Lightbox plugin <http://fancyapps.com/fancybox/>`_) to add interactivity
+to their assignment.
 
 Content
 -------
@@ -173,8 +175,7 @@ CSS
 Javascript/jQuery
 `````````````````
 - jQuery attached to the page using a <script> tag
-- Use of javascript such as a `jQuery Lightbox plugin <http://fancyapps.com/fancybox/>`_ for display
-  of the full size image without leaving the page.
+- Use of javascript such as a `jQuery Lightbox plugin <http://fancyapps.com/fancybox/>`_ 
 
 ------------------------
 Project 4: jQuery Plugin
