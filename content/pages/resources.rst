@@ -62,9 +62,16 @@ Tools & Resources
 * `jQuery UI <http://jqueryui.com>`_: User Interface library for jQuery providing UI elements like tabs, dialogs, etc.
 * `Sons of Suckerfish Dropdowns <http://www.htmldog.com/articles/suckerfish/dropdowns/>`_: Tutorial and examples of how to create a dropdown menu with CSS.
 * `Fillerama <http://chrisvalleskey.com/fillerama/>`_: Website for generating filler html content (lorem ipsum)
+* `Stitches CSS Sprite Generator <http://draeton.github.io/stitches/>`_: Tool for generating CSS sprites (combining multiple images into a single image)
+* `Layer Styles CSS Generator <http://www.layerstyles.org/builder.html>`_: Tool for generating CSS for shadows, rounded corners, gradient backgrounds, etc. with an interface similar to Adobe Creative Suite Layer Styles
 
 Software
 --------
 
 * `Brackets <http://brackets.io/>`_: Free HTML/CSS/Javascript Editor from Adobe 
 * `FileZilla <https://filezilla-project.org/>`_: Free cross-platform FTP software 
+
+Plugins & Libraries
+-------------------
+* `jQuery Cycle2 <http://jquery.malsup.com/cycle2/>`_: jQuery Slideshow Plugin
+* `Fotorama <http://fotorama.io/>`_: jQuery Lightobx/Gallery Plugin
