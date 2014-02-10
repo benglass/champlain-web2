@@ -8,12 +8,12 @@ Course Resources
 Labs
 ----
 
-* **Lab:** Resume (Content: [`Text <../materials/labs/resume/content.txt>`_] [`HTML <../materials/labs/resume/content.html>`_]) 
-* **Lab:** `Resume (Example HTML/CSS) <../materials/labs/resume>`_
-* **Lab:** Floats (`Exercise 1 <{filename}labs/floats/exercise1.rst>`_, `Exercise 2 <{filename}labs/floats/exercise2.rst>`_, `Exercise 3 <{filename}labs/floats/exercise3.rst>`_) 
-* **Lab:** Layout (`Exercise 1 <{filename}labs/layout/exercise1.rst>`__, `Exercise 2 <{filename}labs/layout/exercise2.rst>`__) 
-* **Lab:** `CSS Buttons <{filename}labs/css-buttons.rst>`__
-* `jQuery: Cycle Lab <../materials/slideshow/jquery-cycle.html>`_
+* Resume (Content: [`Text <../materials/labs/resume/content.txt>`_] [`HTML <../materials/labs/resume/content.html>`_]) 
+* `Resume (Example HTML/CSS) <../materials/labs/resume>`_
+* Floats (`Exercise 1 <{filename}labs/floats/exercise1.rst>`_, `Exercise 2 <{filename}labs/floats/exercise2.rst>`_, `Exercise 3 <{filename}labs/floats/exercise3.rst>`_) 
+* Layout (`Exercise 1 <{filename}labs/layout/exercise1.rst>`__, `Exercise 2 <{filename}labs/layout/exercise2.rst>`__) 
+* `CSS Buttons <{filename}labs/css-buttons.rst>`__
+* `jQuery CycleLab <{filename}labs/jquery-cycle.rst>`__
 * `CSS: Framework Lab <../materials/framework-lab/layout.html>`_
 * `CSS3 Lab <../materials/css3.html>`_
 * `CSS: Intro to Floats <../materials/intro-to-floats.html>`_
