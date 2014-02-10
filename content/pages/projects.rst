@@ -73,9 +73,9 @@ CSS
 Project 2: Site Layout
 ----------------------
 
-Students will design a basic website layout in the form of a wireframe (content design, color, typography 
-and imagery are not required) and produce it using HTML/CSS. This project is designed to familiarize students
-with CSS layout properties such as floating/clearing and positioning. 
+Students will design a basic website layout and produce it using HTML/CSS. 
+This project is designed to familiarize students with CSS layout properties such as 
+floating/clearing and positioning. 
 
 Elements
 --------
