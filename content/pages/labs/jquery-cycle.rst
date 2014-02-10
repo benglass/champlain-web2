@@ -156,7 +156,7 @@ and more. This lab will show you how to use the popular `jQuery Cycle Plugin <ht
 
 
 16. Now that we have applied basic styling to our slideshow, we are ready to use the jQuery Cycle plugin
-    to enable to slideshow effect. Go to the `jQuery Cycle Plugin Website <http://jquery.malsup.com/cycle2/>` 
+    to enable to slideshow effect. Go to the `jQuery Cycle Plugin Website <http://jquery.malsup.com/cycle2/>`_ 
     and download the **Production** version of the plugin (it is compressed to make it download faster). Go to
     the downloads page and right click on the download button and choose **Save Link As**. Save this file as
     **jquery.cycle.js** in the same folder as your website.
