@@ -47,6 +47,7 @@ Free resources and courses for online learning.
 * `A List Apart Floats 101 <http://www.alistapart.com/articles/css-floats-101/>`_: Explanation of CSS floats
 * `Discover DevTools <https://www.codeschool.com/courses/discover-devtools>`_: Chrome Developer Tools Course
 * `Javascript Roadtrip <https://www.codeschool.com/courses/javascript-road-trip-part-1>`_: Introduction to Javascript Course
+* `Learn CSS Layout <http://learnlayout.com/>`_: CSS Layout Course
 
 Tools & Resources
 -----------------
@@ -63,7 +64,15 @@ Tools & Resources
 * `Sons of Suckerfish Dropdowns <http://www.htmldog.com/articles/suckerfish/dropdowns/>`_: Tutorial and examples of how to create a dropdown menu with CSS.
 * `Fillerama <http://chrisvalleskey.com/fillerama/>`_: Website for generating filler html content (lorem ipsum)
 * `Stitches CSS Sprite Generator <http://draeton.github.io/stitches/>`_: Tool for generating CSS sprites (combining multiple images into a single image)
+
+CSS3 Generators
+---------------
+
+Online tools to help generate CSS3 for drop shadows, rounded corners, gradients and animation. These tools help generate the code so that it
+will work in different browsers.
+
 * `Layer Styles CSS Generator <http://www.layerstyles.org/builder.html>`_: Tool for generating CSS for shadows, rounded corners, gradient backgrounds, etc. with an interface similar to Adobe Creative Suite Layer Styles
+* `CSS 3 Generator <http://css3generator.com/>`_: Tool for generating CSS3
 
 Software
 --------

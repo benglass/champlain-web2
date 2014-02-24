@@ -184,10 +184,10 @@ Project 4: jQuery Plugin
 Students will select a `jQuery plugin <http://plugins.jquery.com/>`_ and create a single HTML 
 page that shows a basic working implementation. This implementation must have some kind of
 customization (for example changing the speed of a slideshow or any other plugin option).
-As part of the process of implementing the plugin, students will write up a set of step-by-step 
-instructions of what they did to get it to work. This will be included on the HTML page
-they submit in the form of an ordered list.  Students will present their plugin to the class 
-and discuss implementation challenges.
+The example html page should also include instructions for implementing the plugin. 
+Students will write up a set of step-by-step numbered instructions of what they did to get it to work. 
+This will be included on the HTML page they submit in the form of an ordered list.  
+Students will present their plugin to the class and discuss implementation challenges.
 
 Instructions
 ------------
