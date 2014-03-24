@@ -13,7 +13,8 @@ Labs
 * Floats (`Exercise 1 <{filename}labs/floats/exercise1.rst>`_, `Exercise 2 <{filename}labs/floats/exercise2.rst>`_, `Exercise 3 <{filename}labs/floats/exercise3.rst>`_) 
 * Layout (`Exercise 1 <{filename}labs/layout/exercise1.rst>`__, `Exercise 2 <{filename}labs/layout/exercise2.rst>`__) 
 * `CSS Buttons <{filename}labs/css-buttons.rst>`__
-* `jQuery CycleLab <{filename}labs/jquery-cycle.rst>`__
+* `jQuery Cycle Lab <{filename}labs/jquery-cycle.rst>`__
+* `jQuery Tooltipster Plugin <{filename}labs/jquery-tooltipster.rst>`__
 * `CSS: Framework Lab <../materials/framework-lab/layout.html>`_
 * `CSS3 Lab <../materials/css3.html>`_
 * `CSS: Intro to Floats <../materials/intro-to-floats.html>`_
