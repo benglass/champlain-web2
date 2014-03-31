@@ -22,6 +22,7 @@ Labs
 * `CSS: Common Content Layouts using Floats <../materials/float-content-layout.html>`_
 * `Javascript: Introduction <../materials/introduction-to-javascript.html>`_
 * `CSS: Background Images for Rollovers <../materials/background-image-rollover/buttons.html>`_
+* `Responsive Design with Media Queries <{filename}labs/layout/responsive.rst>`_
 * `Responsive Design <../materials/responsive-tutorial>`_
 * `Media Queries <../materials/media-queries.html>`_
 
@@ -59,6 +60,7 @@ Tools & Resources
 * `Adobe Edge Web Fonts <http://html.adobe.com/edge/webfonts/>`_: Free Web Fonts from Adobe 
 * `TypeTester <http://www.typetester.org/>`_: Compare fonts in your browser 
 * `Responsinator <http://www.responsinator.com/>`_: Preview Website on Multiple Devices 
+* `This Is Responsive <http://bradfrost.github.io/this-is-responsive/>`_: : Responsive Design Patterns, Resources and News 
 * `Twitter Bootstrap <http://getbootstrap.com/>`_: Front-end framework with grids, forms, typography and ui
 * `LESS <http://lesscss.org/>`_: CSS Pre-Processor adds features like variables and selector nesting to CSS
 * `jQuery UI <http://jqueryui.com>`_: User Interface library for jQuery providing UI elements like tabs, dialogs, etc.
