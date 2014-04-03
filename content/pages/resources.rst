@@ -67,6 +67,7 @@ Tools & Resources
 * `Sons of Suckerfish Dropdowns <http://www.htmldog.com/articles/suckerfish/dropdowns/>`_: Tutorial and examples of how to create a dropdown menu with CSS.
 * `Fillerama <http://chrisvalleskey.com/fillerama/>`_: Website for generating filler html content (lorem ipsum)
 * `Stitches CSS Sprite Generator <http://draeton.github.io/stitches/>`_: Tool for generating CSS sprites (combining multiple images into a single image)
+* `Magic of CSS <http://adamschwartz.co/magic-of-css/>`_: CSS reference for various properties grouped by type (layout, typography, etc.) with examples
 
 CSS3 Generators
 ---------------
