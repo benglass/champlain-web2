@@ -69,55 +69,8 @@ CSS
 - Typographic Styles for links (unvisited, visited, hover, active)
 - Typographic Styles for unordered lists
 
-------------------------
-Project 2: Photo Gallery
-------------------------
-
-Students will design and build a photo gallery using HTML and CSS.
-The photo gallery will include a display of thumbnail images that are clickable 
-in order to view a larger size image with an associated title and description.
-This project focuses on basic layout and must use either floats or absolute positioning
-in CSS to lay out the thumbnails. Students will use a jQuery Plugin of their choosing
-(such as a `jQuery Lightbox plugin <http://fancyapps.com/fancybox/>`_) to add interactivity
-to their assignment.
-
-Content
--------
-
-Students will include at 10 images in the photo gallery, with two different versions of each image 
-(thumbnail and full size - the same image cannot be used as both the thumbnail and full size image). 
-
-Design
-------
-
-Students will design their resume using Illustrator or Photoshop 
-and submit the final design in PDF format. The design will demonstrate how thumbnails will be displayed
-as well as how the full size image is displayed. This can be submitted as a 2-page PDF or 2 separate PDFs.
-The display of the full size images must be customized and cannot be the default styles supplied by jQuery plugin.
-
-Production
-----------
-
-Students will build an HTML and CSS version of the Photo Gallery they have designed.
-The HTML and CSS should demonstrate the following techniques:
-
-HTML
-````
-- Use of src and alt attributes of the <img> tag
-- Use of <a> tags with href attribute for linking from thumbnail images to large versions
-
-CSS
-```
-- Use of floats or absolute position for thumbnail layout
-- Customized styling for full size image display
-
-Javascript/jQuery
-`````````````````
-- jQuery attached to the page using a <script> tag
-- Use of javascript such as a `jQuery Lightbox plugin <http://fancyapps.com/fancybox/>`_ 
-
 ----------------------
-Project 3: Site Layout
+Project 2: Site Layout
 ----------------------
 
 Students will design a basic website layout and produce it using HTML/CSS. 
@@ -176,6 +129,53 @@ CSS
 - Clear for clearing footer
 - CSS for dropdown navigation using `Sons of Suckerfish technique <http://www.htmldog.com/articles/suckerfish/dropdowns/>`_
 - Basic typographic styles for 3 levels of headings, paragraphs and links (can be taken from resume)
+
+------------------------
+Project 3: Photo Gallery
+------------------------
+
+Students will design and build a photo gallery using HTML and CSS.
+The photo gallery will include a display of thumbnail images that are clickable 
+in order to view a larger size image with an associated title and description.
+This project focuses on basic layout and must use either floats or absolute positioning
+in CSS to lay out the thumbnails. Students will use a jQuery Plugin of their choosing
+(such as a `jQuery Lightbox plugin <http://fancyapps.com/fancybox/>`_) to add interactivity
+to their assignment.
+
+Content
+-------
+
+Students will include at 10 images in the photo gallery, with two different versions of each image 
+(thumbnail and full size - the same image cannot be used as both the thumbnail and full size image). 
+
+Design
+------
+
+Students will design their resume using Illustrator or Photoshop 
+and submit the final design in PDF format. The design will demonstrate how thumbnails will be displayed
+as well as how the full size image is displayed. This can be submitted as a 2-page PDF or 2 separate PDFs.
+The display of the full size images must be customized and cannot be the default styles supplied by jQuery plugin.
+
+Production
+----------
+
+Students will build an HTML and CSS version of the Photo Gallery they have designed.
+The HTML and CSS should demonstrate the following techniques:
+
+HTML
+````
+- Use of src and alt attributes of the <img> tag
+- Use of <a> tags with href attribute for linking from thumbnail images to large versions
+
+CSS
+```
+- Use of floats or absolute position for thumbnail layout
+- Customized styling for full size image display
+
+Javascript/jQuery
+`````````````````
+- jQuery attached to the page using a <script> tag
+- Use of javascript such as a `jQuery Lightbox plugin <http://fancyapps.com/fancybox/>`_ 
 
 ------------------------
 Project 4: jQuery Plugin
