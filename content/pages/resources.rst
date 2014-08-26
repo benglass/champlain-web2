@@ -8,6 +8,7 @@ Course Resources
 Labs
 ----
 
+* `Hello World <{filename}labs/hello-world.rst>`_
 * Resume (Content: [`Text <../materials/labs/resume/content.txt>`_] [`HTML <../materials/labs/resume/content.html>`_]) 
 * `Resume (Example HTML/CSS) <../materials/labs/resume>`_
 * Floats (`Exercise 1 <{filename}labs/floats/exercise1.rst>`_, `Exercise 2 <{filename}labs/floats/exercise2.rst>`_, `Exercise 3 <{filename}labs/floats/exercise3.rst>`_) 
