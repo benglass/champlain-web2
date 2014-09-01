@@ -47,10 +47,11 @@ Free resources and courses for online learning.
 * `Code Academy <http://www.codecademy.com/>`_: Web Development Courses
 * `Try jQuery <http://try.jquery.com/>`_: Introduction to jQuery Course
 * `HTMLDog <http://htmldog.com>`_: HTML/CSS Reference 
-* `A List Apart Floats 101 <http://www.alistapart.com/articles/css-floats-101/>`_: Explanation of CSS floats
+* `CSS Tricks: All About Floats <http://css-tricks.com/all-about-floats/>`_: Explanation of CSS floats
 * `Discover DevTools <https://www.codeschool.com/courses/discover-devtools>`_: Chrome Developer Tools Course
 * `Javascript Roadtrip <https://www.codeschool.com/courses/javascript-road-trip-part-1>`_: Introduction to Javascript Course
 * `Learn CSS Layout <http://learnlayout.com/>`_: CSS Layout Course
+* `Learn to Code HTML & CSS <http://learn.shayhowe.com/html-css/>`_: HTML + CSS Course
 
 Tools & Resources
 -----------------
@@ -68,6 +69,7 @@ Tools & Resources
 * `Sons of Suckerfish Dropdowns <http://www.htmldog.com/articles/suckerfish/dropdowns/>`_: Tutorial and examples of how to create a dropdown menu with CSS.
 * `Fillerama <http://chrisvalleskey.com/fillerama/>`_: Website for generating filler html content (lorem ipsum)
 * `Stitches CSS Sprite Generator <http://draeton.github.io/stitches/>`_: Tool for generating CSS sprites (combining multiple images into a single image)
+* `CSS Typeset <http://csstypeset.com/>`_: Tool for generating css for typography (font face, size, weight, etc.)
 
 CSS3 Generators
 ---------------
