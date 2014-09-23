@@ -57,7 +57,7 @@ mouse over the button. This lab will review the steps used to achieve this techn
    and save this file as **btn-shop-now.png** into the **images** folder
    using **File > Save For Web**. Be sure to include the text for the button in the image.
 
-.. figure:: /images/btn-shop-now.png
+.. figure:: ../images/btn-shop-now.png
 
    The image is twice the height of the actual button and the top 50%
    of the image is the normal button state. The bottom 50% is the rollover state.
