@@ -37,9 +37,9 @@ RELATIVE_URLS = True
 
 # Course Settings
 COURSE_NAME = 'Web 2'
-COURSE_NUM = 'GDD 306-51'
-COURSE_SEMESTER = 'Fall 2014'
-COURSE_LOCATION = 'Joyce Hall, Room 103'
-COURSE_TIMES = 'Tuesday 5:30 - 8:15 PM'
+COURSE_NUM = 'GDD 306-01'
+COURSE_SEMESTER = 'Spring 2015'
+COURSE_LOCATION = 'GBTC 012'
+COURSE_TIMES = 'Monday 5:30 - 8:15 PM'
 INSTRUCTOR_NAME = 'Ben Glassman'
-INSTRUCTOR_EMAIL = 'bglassmancc@gmail.com'
+INSTRUCTOR_EMAIL = 'benjamin.glassman@champlain.edu'
