@@ -9,6 +9,7 @@ Labs
 ----
 
 * `Hello World <{filename}labs/hello-world.rst>`_
+* `HTML for Structure <{filename}labs/html-structure.rst>`__
 * `CSS for Typography <{filename}labs/css-typography.rst>`__
 * Resume (Content: [`Text <../materials/labs/resume/content.txt>`_] [`HTML <../materials/labs/resume/content.html>`_]) 
 * `Resume (Example HTML/CSS) <../materials/labs/resume>`_

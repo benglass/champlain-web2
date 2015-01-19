@@ -6,6 +6,10 @@ CSS for Typography
 :author: Ben Glassman
 :hidden: 1
 
+For this exercise we will create a CSS stylesheet which defines the typography
+of a web page. The stylesheet we create will be usable for future projects since
+every web site needs to specify typography for content in this way.
+
 1. Create an HTML file called **css-typography.html**. Set the title to "CSS Typography".
    Create a css file named **styles.css**. 
    Link the two together using the html <link> tag.
@@ -168,4 +172,4 @@ CSS for Typography
 
 .. raw:: html
 
-    <p data-height="500" data-theme-id="0" data-slug-hash="yybejJ" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/benglass/pen/yybejJ'>jALGH</a> by Ben Glassman (<a href='http://codepen.io/benglass'>@benglass</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+    <p data-height="500" data-theme-id="0" data-slug-hash="yybejJ" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/benglass/pen/yybejJ'>yybejJ</a> by Ben Glassman (<a href='http://codepen.io/benglass'>@benglass</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
