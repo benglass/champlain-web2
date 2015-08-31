@@ -1,9 +1,9 @@
 import datetime
 
-START_DATE = datetime.date(2015, 1, 12)
-END_DATE = datetime.date(2015, 5, 1)
+START_DATE = datetime.date(2015, 9, 1)
+END_DATE = datetime.date(2015, 12, 11)
 HOLIDAYS = [
-    datetime.date(2015, 3, 9)
+    datetime.date(2015, 10, 13)
 ]
 CLASS_INTERVAL = datetime.timedelta(days=7)
 
